@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57AB36B442D6BF0543BC09FC /* libPods-Remix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 751E0251D7ABCD610A1AF262 /* libPods-Remix.a */; };
 		C8748D361EB8E2E60003E683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8748D351EB8E2E60003E683 /* AppDelegate.swift */; };
 		C8748D381EB8E2E60003E683 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8748D371EB8E2E60003E683 /* ViewController.swift */; };
 		C8748D3B1EB8E2E60003E683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8748D391EB8E2E60003E683 /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C064F3A2F371A966E7611E2 /* Pods-Remix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remix.release.xcconfig"; path = "Pods/Target Support Files/Pods-Remix/Pods-Remix.release.xcconfig"; sourceTree = "<group>"; };
+		4C1320C9F876B0F3ACE51C4E /* Pods-Remix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Remix/Pods-Remix.debug.xcconfig"; sourceTree = "<group>"; };
+		751E0251D7ABCD610A1AF262 /* libPods-Remix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Remix.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748D321EB8E2E60003E683 /* Remix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748D351EB8E2E60003E683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8748D371EB8E2E60003E683 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57AB36B442D6BF0543BC09FC /* libPods-Remix.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		732BC16B58A874A48B66B8C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				751E0251D7ABCD610A1AF262 /* libPods-Remix.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B24A6DF5A0872E160B53CE51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C1320C9F876B0F3ACE51C4E /* Pods-Remix.debug.xcconfig */,
+				1C064F3A2F371A966E7611E2 /* Pods-Remix.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C8748D291EB8E2E60003E683 = {
 			isa = PBXGroup;
 			children = (
 				C8748D341EB8E2E60003E683 /* Remix */,
 				C8748D491EB8E2E70003E683 /* RemixTests */,
 				C8748D331EB8E2E60003E683 /* Products */,
+				B24A6DF5A0872E160B53CE51 /* Pods */,
+				732BC16B58A874A48B66B8C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8748D4F1EB8E2E70003E683 /* Build configuration list for PBXNativeTarget "Remix" */;
 			buildPhases = (
+				40DAC91F98D8E10C4E342824 /* [CP] Check Pods Manifest.lock */,
 				C8748D2E1EB8E2E60003E683 /* Sources */,
 				C8748D2F1EB8E2E60003E683 /* Frameworks */,
 				C8748D301EB8E2E60003E683 /* Resources */,
+				F8868D407E20911D88645F67 /* [CP] Embed Pods Frameworks */,
+				7A7369C13FA716DE5A62BB71 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +222,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40DAC91F98D8E10C4E342824 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7A7369C13FA716DE5A62BB71 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Remix/Pods-Remix-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8868D407E20911D88645F67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Remix/Pods-Remix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C8748D2E1EB8E2E60003E683 /* Sources */ = {
@@ -339,6 +414,7 @@
 		};
 		C8748D501EB8E2E70003E683 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C1320C9F876B0F3ACE51C4E /* Pods-Remix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = J6LY6992AF;
@@ -352,6 +428,7 @@
 		};
 		C8748D511EB8E2E70003E683 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C064F3A2F371A966E7611E2 /* Pods-Remix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = J6LY6992AF;
