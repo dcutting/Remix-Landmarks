@@ -1,3 +1,28 @@
-PODFILE CHECKSUM: 0f30f764f5b6e736c15f82d6e76f23663a507c70
+PODS:
+  - LandmarkList (0.0.1):
+    - LandmarkService/API
+  - LandmarkService (0.0.1):
+    - LandmarkService/API (= 0.0.1)
+    - LandmarkService/Mock (= 0.0.1)
+    - LandmarkService/Restful (= 0.0.1)
+  - LandmarkService/API (0.0.1)
+  - LandmarkService/Mock (0.0.1)
+  - LandmarkService/Restful (0.0.1)
+
+DEPENDENCIES:
+  - LandmarkList (from `Features/LandmarkList`)
+  - LandmarkService (from `Services/LandmarkService`)
+
+EXTERNAL SOURCES:
+  LandmarkList:
+    :path: Features/LandmarkList
+  LandmarkService:
+    :path: Services/LandmarkService
+
+SPEC CHECKSUMS:
+  LandmarkList: 04eac882da1a1e90405d8adeef2baa5fed6c3c01
+  LandmarkService: 1da8d98d6fb85ff4bd2a7f5c91401b11a3d51c2d
+
+PODFILE CHECKSUM: 9f803548ed7acab420a05afea1cbea60c7ebeb60
 
 COCOAPODS: 1.2.1
