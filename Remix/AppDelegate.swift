@@ -1,3 +1,6 @@
+import LandmarkService
+import LandmarkList
+
 import UIKit
 
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -10,7 +13,11 @@ import UIKit
         window = UIWindow(frame: UIScreen.main.bounds)
         guard let window = window else { return false }
         
-        appCoordinator = AppCoordinator(window: window)
+        let landmarkService = MockLandmarkService()
+        let london = Landmark(id: LandmarkID(), name: "London", coordinate: LandmarkCoordinate(latitude: 51.0, longitude: 0.0))
+        landmarkService.landmarks = [london]
+        let landmarkListCoordinator = LandmarkListCoordinator(landmarkService: landmarkService)
+        appCoordinator = AppCoordinator(window: window, landmarkListCoordinator: landmarkListCoordinator)
         appCoordinator?.start()
         
         window.makeKeyAndVisible()
