@@ -1,4 +1,10 @@
 import UIKit
 
-class LandmarkListViewController: UIViewController {
+public class LandmarkListViewController: UIViewController {
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .red
+    }
 }

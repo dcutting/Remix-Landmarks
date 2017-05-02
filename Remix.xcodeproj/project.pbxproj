@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		A795B0E683FC32DF416EB211 /* Pods_Remix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEA966851E53E9DDA85E349 /* Pods_Remix.framework */; };
 		C8748D361EB8E2E60003E683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8748D351EB8E2E60003E683 /* AppDelegate.swift */; };
-		C8748D381EB8E2E60003E683 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8748D371EB8E2E60003E683 /* ViewController.swift */; };
-		C8748D3B1EB8E2E60003E683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8748D391EB8E2E60003E683 /* Main.storyboard */; };
 		C8748D3D1EB8E2E60003E683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8748D3C1EB8E2E60003E683 /* Assets.xcassets */; };
 		C8748D401EB8E2E70003E683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8748D3E1EB8E2E70003E683 /* LaunchScreen.storyboard */; };
 		C8748D4B1EB8E2E70003E683 /* RemixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8748D4A1EB8E2E70003E683 /* RemixTests.swift */; };
+		C8748D661EB924890003E683 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8748D651EB924890003E683 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +31,13 @@
 		4C1320C9F876B0F3ACE51C4E /* Pods-Remix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Remix/Pods-Remix.debug.xcconfig"; sourceTree = "<group>"; };
 		C8748D321EB8E2E60003E683 /* Remix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748D351EB8E2E60003E683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C8748D371EB8E2E60003E683 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C8748D3A1EB8E2E60003E683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8748D3C1EB8E2E60003E683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8748D3F1EB8E2E70003E683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8748D411EB8E2E70003E683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8748D461EB8E2E70003E683 /* RemixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748D4A1EB8E2E70003E683 /* RemixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemixTests.swift; sourceTree = "<group>"; };
 		C8748D4C1EB8E2E70003E683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8748D651EB924890003E683 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				C8748D351EB8E2E60003E683 /* AppDelegate.swift */,
-				C8748D371EB8E2E60003E683 /* ViewController.swift */,
-				C8748D391EB8E2E60003E683 /* Main.storyboard */,
 				C8748D3C1EB8E2E60003E683 /* Assets.xcassets */,
 				C8748D3E1EB8E2E70003E683 /* LaunchScreen.storyboard */,
 				C8748D411EB8E2E70003E683 /* Info.plist */,
+				C8748D651EB924890003E683 /* AppCoordinator.swift */,
 			);
 			path = Remix;
 			sourceTree = "<group>";
@@ -210,7 +207,6 @@
 			files = (
 				C8748D401EB8E2E70003E683 /* LaunchScreen.storyboard in Resources */,
 				C8748D3D1EB8E2E60003E683 /* Assets.xcassets in Resources */,
-				C8748D3B1EB8E2E60003E683 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8748D381EB8E2E60003E683 /* ViewController.swift in Sources */,
+				C8748D661EB924890003E683 /* AppCoordinator.swift in Sources */,
 				C8748D361EB8E2E60003E683 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,14 +296,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C8748D391EB8E2E60003E683 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C8748D3A1EB8E2E60003E683 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C8748D3E1EB8E2E70003E683 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -489,6 +477,7 @@
 				C8748D511EB8E2E70003E683 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8748D521EB8E2E70003E683 /* Build configuration list for PBXNativeTarget "RemixTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +486,7 @@
 				C8748D541EB8E2E70003E683 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
