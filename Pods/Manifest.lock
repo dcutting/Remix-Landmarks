@@ -1,4 +1,7 @@
 PODS:
+  - LandmarkBrowser (0.0.1):
+    - LandmarkDetail
+    - LandmarkList
   - LandmarkDetail (0.0.1):
     - LandmarkService/API
     - LoadablePodResource
@@ -13,12 +16,15 @@ PODS:
   - LoadablePodResource (0.0.1)
 
 DEPENDENCIES:
+  - LandmarkBrowser (from `Features/LandmarkBrowser`)
   - LandmarkDetail (from `Features/LandmarkDetail`)
   - LandmarkList (from `Features/LandmarkList`)
   - LandmarkService (from `Services/LandmarkService`)
   - LoadablePodResource (from `Services/LoadablePodResource`)
 
 EXTERNAL SOURCES:
+  LandmarkBrowser:
+    :path: Features/LandmarkBrowser
   LandmarkDetail:
     :path: Features/LandmarkDetail
   LandmarkList:
@@ -29,11 +35,12 @@ EXTERNAL SOURCES:
     :path: Services/LoadablePodResource
 
 SPEC CHECKSUMS:
+  LandmarkBrowser: b66f3ea688f9f9b57a5b33f83fdf314da935d1c9
   LandmarkDetail: 930d1df685ee147a8115bb19227fe242f8014362
   LandmarkList: 67b84404e8b50130f8c46911a245163205730ca2
   LandmarkService: 303bf928a0d745abe045b34820d32dba736262c4
   LoadablePodResource: '04397809c6abbe73331b56d682c939cd385e371a'
 
-PODFILE CHECKSUM: 1f6b39a7fc65eab03e0a2aefcf005e916f7d691e
+PODFILE CHECKSUM: 470ee51badee345cb268df3f3733bfa19afbef10
 
 COCOAPODS: 1.2.1

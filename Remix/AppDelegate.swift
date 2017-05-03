@@ -16,8 +16,7 @@ import UIKit
         let landmarkService = MockLandmarkService()
         let london = Landmark(id: LandmarkID(), name: "London", coordinate: LandmarkCoordinate(latitude: 51.0, longitude: 0.0))
         landmarkService.landmarks = [london]
-        let landmarkListCoordinator = LandmarkListCoordinator(landmarkService: landmarkService)
-        appCoordinator = AppCoordinator(window: window, landmarkListCoordinator: landmarkListCoordinator)
+        appCoordinator = AppCoordinator(window: window, landmarkService: landmarkService)
         appCoordinator?.start()
         
         window.makeKeyAndVisible()

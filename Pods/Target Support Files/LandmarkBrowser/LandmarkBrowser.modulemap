@@ -1,0 +1,6 @@
+framework module LandmarkBrowser {
+  umbrella header "LandmarkBrowser-umbrella.h"
+
+  export *
+  module * { export * }
+}
