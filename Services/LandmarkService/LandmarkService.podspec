@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec "Tests" do |sp|
-    s.framework = 'XCTest'
+    sp.framework = 'XCTest'
     sp.source_files = "Tests"
   end
 

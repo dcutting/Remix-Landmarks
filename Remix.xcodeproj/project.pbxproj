@@ -487,7 +487,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E2F60098E28F543E53789FDD /* Pods-RemixTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = J6LY6992AF;
 				INFOPLIST_FILE = RemixTests/Info.plist;
@@ -503,7 +502,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B064AB5AD91AC7223B4565DB /* Pods-RemixTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = J6LY6992AF;
 				INFOPLIST_FILE = RemixTests/Info.plist;

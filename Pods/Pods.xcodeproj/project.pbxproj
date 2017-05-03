@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04394E2BB2BE6CDD6D087FA5FB40450F /* LandmarkEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC14F78EB21EF95010AA012D150CA5F /* LandmarkEntity.framework */; };
 		05046BD6F90E43CB006A138851B8FA18 /* LandmarkListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D471F001B3ADE0B6CD75D052464C86C /* LandmarkListWireframe.swift */; };
 		0851F117730405D1E1C7DB7621E2609D /* LoadablePodResource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C46A67F219FE15E73FA7080295BF61C /* LoadablePodResource.framework */; };
 		08F42C021B476258FA797654FEC2CCBA /* MockLandmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1C961F5E21A29C870C9CC2F574838 /* MockLandmarkService.swift */; };
@@ -17,7 +16,6 @@
 		1EF6BEECAAE4457510B7C398D00257C9 /* LandmarkDetail.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0A50CFB0C1249B484E643BDD80E9A70B /* LandmarkDetail.bundle */; };
 		20026697444BABB18215013F2A61F893 /* LandmarkEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC14F78EB21EF95010AA012D150CA5F /* LandmarkEntity.framework */; };
 		2F5FF05FC5E935617FA3A17A6690BABC /* LandmarkService-API-Mock-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4F59339BA2B89D5B2B371C855B2A3C /* LandmarkService-API-Mock-dummy.m */; };
-		3578B2833BBB4611FC6DC7F31AD2614E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB926EF8A9CFA45934F80C4A24B07082 /* Foundation.framework */; };
 		358BEAC5972011CC9A5DBA1BF82B0429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB926EF8A9CFA45934F80C4A24B07082 /* Foundation.framework */; };
 		377AD6265A3797DC840FCC720A5EC3FF /* LandmarkDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D13414EBD6C8B6BCDF68C3FE6D1C05 /* LandmarkDetailCoordinator.swift */; };
 		480BCB26A60497E9683185BFD384A185 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB926EF8A9CFA45934F80C4A24B07082 /* Foundation.framework */; };
@@ -40,8 +38,10 @@
 		8D77F855E956D394870131803AF49E76 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DED90E4FA49C3320009A980B2D8BF4 /* XCTest.framework */; };
 		8E9446E5717FDB96BE131827399C7322 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB926EF8A9CFA45934F80C4A24B07082 /* Foundation.framework */; };
 		930CF7E1F01A995FA79FBD2A95666509 /* Pods-Remix-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A0E517A02A2FC4D6D2644A5161E5A2D /* Pods-Remix-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		944F9A289200A1142072D13D41429692 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB926EF8A9CFA45934F80C4A24B07082 /* Foundation.framework */; };
 		949173F87A48AA8D566530472C39C835 /* Pods-Remix-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF020F5A7782E2AA20E161B506C67D8B /* Pods-Remix-dummy.m */; };
 		95DA70888B19C5C3FBE97728CBFDA208 /* LandmarkService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00078C298C74CBE86DD3818DEBA588F7 /* LandmarkService.framework */; };
+		9B9F65B19349DD57882284F4B90C52DE /* LandmarkEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC14F78EB21EF95010AA012D150CA5F /* LandmarkEntity.framework */; };
 		9EFC1337D775ABF056A891C205FA0A7C /* LandmarkListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82921DE4E3F812A3AA2436DF7E600F0 /* LandmarkListInteractor.swift */; };
 		A3219A7716D1FB222423C2E0701C35D4 /* LoadablePodResource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C46A67F219FE15E73FA7080295BF61C /* LoadablePodResource.framework */; };
 		AAE262E333C56CDCFA30A02FCF60727A /* LandmarkList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E63D9D84660A6FF3D0B07CADD7D46DB /* LandmarkList.storyboard */; };
@@ -52,7 +52,6 @@
 		B311A76E6AE0C9A5FC12C915714A99C3 /* LandmarkDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A8750AC73577C0B76C0C0BA89F990F /* LandmarkDetail.storyboard */; };
 		B7830958F4E52FF0BE17B33B09995CC2 /* LandmarkDetail-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BEB6E485BA53C936FE2A7676E89D8A /* LandmarkDetail-dummy.m */; };
 		B889D69E69B9DF0C2FD3DC00E60E83FA /* LandmarkList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A78A0995BEBEDAA72133C2BC919B622 /* LandmarkList.framework */; };
-		B9BD5CB86E485EF4F1DA45EC28E6B0BE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DED90E4FA49C3320009A980B2D8BF4 /* XCTest.framework */; };
 		BEB6C632FF4A65D0989564883F35367F /* LandmarkBrowser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2FD5D4CF2291410E154E8782B65B19 /* LandmarkBrowser-dummy.m */; };
 		C0E4BE91D84AC6C439BE7A7B96BF81F7 /* LandmarkBrowser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8418D104FF54E83CD6022B899CE2736D /* LandmarkBrowser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CF6FACA6771B47927926861CA49EF05E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB926EF8A9CFA45934F80C4A24B07082 /* Foundation.framework */; };
@@ -367,16 +366,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0C995466785474154E640B70FCA05CFF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3578B2833BBB4611FC6DC7F31AD2614E /* Foundation.framework in Frameworks */,
-				04394E2BB2BE6CDD6D087FA5FB40450F /* LandmarkEntity.framework in Frameworks */,
-				B9BD5CB86E485EF4F1DA45EC28E6B0BE /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0D539E3E3B2F6401C6C86ECC93845B15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,6 +393,15 @@
 				D5B285446F653FBF6C87858E05B3D9B3 /* LandmarkEntity.framework in Frameworks */,
 				95DA70888B19C5C3FBE97728CBFDA208 /* LandmarkService.framework in Frameworks */,
 				A3219A7716D1FB222423C2E0701C35D4 /* LoadablePodResource.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BF7A1CBB75173BCD10F7351BC892049 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				944F9A289200A1142072D13D41429692 /* Foundation.framework in Frameworks */,
+				9B9F65B19349DD57882284F4B90C52DE /* LandmarkEntity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,7 +997,7 @@
 			buildConfigurationList = A2701228ADBE69739E95A90AD208293B /* Build configuration list for PBXNativeTarget "LandmarkService-API-Mock" */;
 			buildPhases = (
 				AC455760763749228D10435F75D770EA /* Sources */,
-				0C995466785474154E640B70FCA05CFF /* Frameworks */,
+				3BF7A1CBB75173BCD10F7351BC892049 /* Frameworks */,
 				E310B54EC81DD0FC6E789D9D7B1962EA /* Headers */,
 			);
 			buildRules = (
