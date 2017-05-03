@@ -1,9 +1,9 @@
 import LandmarkService
-import LoadablePodResources
+import LoadablePodResource
 
 import UIKit
 
-class LandmarkDetailViewController: UIViewController, Loadable {
+class LandmarkDetailViewController: UIViewController, LoadablePodResource {
     
     @IBOutlet weak var nameLabel: UILabel!
     

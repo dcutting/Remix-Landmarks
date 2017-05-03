@@ -1,6 +1,6 @@
-public protocol Loadable: class {}
+public protocol LoadablePodResource: class {}
 
-extension Loadable {
+extension LoadablePodResource {
     
     static func loadBundle(named name: String) -> Bundle? {
         let podBundle = Bundle(for: self)
@@ -12,7 +12,7 @@ extension Loadable {
     }
 }
 
-extension Loadable where Self: UIViewController {
+extension LoadablePodResource where Self: UIViewController {
     
     public static func fromStoryboard(named storyboardName: String, identifier: String, bundle bundleName: String) -> Self {
         if let bundle = loadBundle(named: bundleName) {

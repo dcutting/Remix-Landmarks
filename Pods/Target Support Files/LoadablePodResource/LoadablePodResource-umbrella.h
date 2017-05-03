@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double LoadablePodResourcesVersionNumber;
-FOUNDATION_EXPORT const unsigned char LoadablePodResourcesVersionString[];
+FOUNDATION_EXPORT double LoadablePodResourceVersionNumber;
+FOUNDATION_EXPORT const unsigned char LoadablePodResourceVersionString[];
 

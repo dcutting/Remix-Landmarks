@@ -1,5 +1,5 @@
 import LandmarkService
-import LoadablePodResources
+import LoadablePodResource
 
 import UIKit
 
@@ -7,7 +7,7 @@ protocol LandmarkListViewControllerDelegate: class {
     func didSelectLandmark(withID: LandmarkID)
 }
 
-class LandmarkListViewController: UIViewController, Loadable {
+class LandmarkListViewController: UIViewController, LoadablePodResource {
     
     @IBOutlet weak var tableView: UITableView!
 

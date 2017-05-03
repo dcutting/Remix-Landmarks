@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "LoadablePodResources"
+  s.name         = "LoadablePodResource"
   s.version      = "0.0.1"
   s.summary      = "Utility for easily loading resources from a pod bundle"
   s.homepage     = "http://cutting.io"
