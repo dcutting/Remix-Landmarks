@@ -18,7 +18,7 @@ public class LandmarkDetailCoordinator {
     }
     
     public func start() {
-        let landmarkDetailViewController = LandmarkDetailViewController.fromStoryboard(named: "LandmarkDetail", identifier: "LandmarkDetailViewController", bundle: "LandmarkDetail")
+        let landmarkDetailViewController = LandmarkDetailWireframe().makeLandmarkDetailViewController()
         landmarkDetailViewController.landmarkID = landmarkID
         navigationController.pushViewController(landmarkDetailViewController, animated: true)
     }
