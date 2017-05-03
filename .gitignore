@@ -25,3 +25,7 @@ node_modules
 *.xcscmblueprint
 
 .idea
+
+# FitNesse
+FitNesseRoot/RecentChanges/*
+FitNesseRoot/**/testResults/
