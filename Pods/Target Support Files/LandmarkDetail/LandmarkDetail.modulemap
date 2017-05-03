@@ -1,0 +1,6 @@
+framework module LandmarkDetail {
+  umbrella header "LandmarkDetail-umbrella.h"
+
+  export *
+  module * { export * }
+}
