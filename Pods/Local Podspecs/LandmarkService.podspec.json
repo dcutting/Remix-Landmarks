@@ -30,7 +30,12 @@
     {
       "name": "Tests",
       "frameworks": "XCTest",
-      "source_files": "Tests"
+      "source_files": "Tests",
+      "dependencies": {
+        "LandmarkService/Mock": [
+
+        ]
+      }
     }
   ]
 }

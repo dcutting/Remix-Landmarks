@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
   s.subspec "Tests" do |sp|
     sp.framework = 'XCTest'
     sp.source_files = "Tests"
+    sp.dependency "LandmarkService/Mock"
   end
 
   s.dependency "LandmarkEntity"
