@@ -9,3 +9,4 @@ end
 
 # Need to list all dependencies here so CocoaPods can find them.
 pod 'LandmarkService', :path => 'Services/LandmarkService'
+pod 'LoadablePodResources', :path => 'Services/LoadablePodResources'

@@ -1,4 +1,5 @@
 import LandmarkService
+import LoadablePodResources
 
 public class LandmarkDetailCoordinator {
     
@@ -17,7 +18,7 @@ public class LandmarkDetailCoordinator {
     }
     
     public func start() {
-        let landmarkDetailViewController = LandmarkDetailViewController.fromResource()
+        let landmarkDetailViewController = LandmarkDetailViewController.fromStoryboard(named: "LandmarkDetail", identifier: "LandmarkDetailViewController", bundle: "LandmarkDetail")
         landmarkDetailViewController.landmarkID = landmarkID
         navigationController.pushViewController(landmarkDetailViewController, animated: true)
     }

@@ -12,4 +12,5 @@ Pod::Spec.new do |s|
     s.name => ['Resources/**/*']
   }
   s.dependency "LandmarkService/API"
+  s.dependency "LoadablePodResources"
 end

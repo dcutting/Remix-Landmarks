@@ -21,10 +21,6 @@
     {
       "name": "Mock",
       "source_files": "Source/MockLandmarkService"
-    },
-    {
-      "name": "Restful",
-      "source_files": "Source/RestfulLandmarkService"
     }
   ]
 }

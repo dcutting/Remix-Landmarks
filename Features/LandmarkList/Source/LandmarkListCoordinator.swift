@@ -1,4 +1,5 @@
 import LandmarkService
+import LoadablePodResources
 
 public protocol LandmarkListCoordinatorDelegate: class {
     func didSelectLandmark(withID: LandmarkID)
@@ -15,7 +16,7 @@ public class LandmarkListCoordinator {
     }
     
     public func start(navigationController: UINavigationController) {
-        let landmarkListViewController = LandmarkListViewController.fromResource()
+        let landmarkListViewController = LandmarkListViewController.fromStoryboard(named: "LandmarkList", identifier: "LandmarkListViewController", bundle: "LandmarkList")
         landmarkListViewController.delegate = self
         navigationController.pushViewController(landmarkListViewController, animated: true)
         

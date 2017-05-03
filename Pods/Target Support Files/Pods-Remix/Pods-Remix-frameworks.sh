@@ -92,11 +92,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/LandmarkDetail/LandmarkDetail.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LandmarkList/LandmarkList.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LandmarkService/LandmarkService.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/LoadablePodResources/LoadablePodResources.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/LandmarkDetail/LandmarkDetail.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LandmarkList/LandmarkList.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LandmarkService/LandmarkService.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/LoadablePodResources/LoadablePodResources.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

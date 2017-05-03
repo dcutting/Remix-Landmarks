@@ -1,4 +1,5 @@
 import LandmarkService
+import LoadablePodResources
 
 import UIKit
 
@@ -46,34 +47,5 @@ extension LandmarkListViewController: UITableViewDelegate {
         let landmarkID = landmark.id
         delegate?.didSelectLandmark(withID: landmarkID)
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
-
-extension Loadable where Self: UIViewController {
-    
-    static func fromResource() -> Self {
-        let storyboard = UIStoryboard(name: "LandmarkList", bundle: bundle)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: className) as? Self {
-            return viewController
-        }
-        preconditionFailure("Could not load \(className) from bundle")
-    }
-}
-
-protocol Loadable: class {}
-
-extension Loadable {
-    
-    static var className: String {
-        return "\(self)".components(separatedBy: ".").last!
-    }
-    
-    static var bundle: Bundle {
-        let podBundle = Bundle(for: self)
-        guard let bundleURL = podBundle.url(forResource: "LandmarkList", withExtension: "bundle"),
-            let bundle = Bundle(url: bundleURL) else {
-                preconditionFailure("Could not locate resources bundle")
-        }
-        return bundle
     }
 }

@@ -1,4 +1,5 @@
 import LandmarkService
+import LoadablePodResources
 
 import UIKit
 
@@ -19,34 +20,5 @@ class LandmarkDetailViewController: UIViewController, Loadable {
     
     func update() {
         nameLabel?.text = "\(String(describing: landmarkID))"
-    }
-}
-
-extension Loadable where Self: UIViewController {
-    
-    static func fromResource() -> Self {
-        let storyboard = UIStoryboard(name: "LandmarkDetail", bundle: bundle)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: className) as? Self {
-            return viewController
-        }
-        preconditionFailure("Could not load \(className) from bundle")
-    }
-}
-
-protocol Loadable: class {}
-
-extension Loadable {
-    
-    static var className: String {
-        return "\(self)".components(separatedBy: ".").last!
-    }
-    
-    static var bundle: Bundle {
-        let podBundle = Bundle(for: self)
-        guard let bundleURL = podBundle.url(forResource: "LandmarkDetail", withExtension: "bundle"),
-            let bundle = Bundle(url: bundleURL) else {
-                preconditionFailure("Could not locate resources bundle")
-        }
-        return bundle
     }
 }
