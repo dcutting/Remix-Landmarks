@@ -9,10 +9,10 @@ public class LandmarkListCoordinator {
     
     public weak var delegate: LandmarkListCoordinatorDelegate?
     
-    let landmarkService: LandmarkService
+    let landmarkListInteractor: LandmarkListInteractor
     
     public init(landmarkService: LandmarkService) {
-        self.landmarkService = landmarkService
+        landmarkListInteractor = LandmarkListInteractor(landmarkService: landmarkService)
     }
     
     public func start(navigationController: UINavigationController) {
@@ -20,13 +20,9 @@ public class LandmarkListCoordinator {
         landmarkListViewController.delegate = self
         navigationController.pushViewController(landmarkListViewController, animated: true)
         
-        landmarkService.fetchAllLandmarks { result in
-            switch result {
-            case let .success(landmarks):
-                landmarkListViewController.landmarks = landmarks
-            case let .failure(error):
-                print(error)
-            }
+        landmarkListInteractor.fetchAllLandmarks { result in
+            let landmarkViewData = LandmarkListPresenter().prepare(result: result)
+            landmarkListViewController.viewData = landmarkViewData
         }
     }
 }

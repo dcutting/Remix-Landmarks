@@ -3,6 +3,17 @@ import LoadablePodResource
 
 import UIKit
 
+struct LandmarkListViewData {
+    
+    struct Row {
+        let id: LandmarkID
+        let name: String
+    }
+
+    var errorMessage: String?
+    var rows: [Row] = []
+}
+
 protocol LandmarkListViewControllerDelegate: class {
     func didSelectLandmark(withID: LandmarkID)
 }
@@ -13,28 +24,40 @@ class LandmarkListViewController: UIViewController, LoadablePodResource {
 
     weak var delegate: LandmarkListViewControllerDelegate?
     
-    var landmarks: [Landmark] = [] {
+    var viewData = LandmarkListViewData() {
         didSet {
-            tableView?.reloadData()
+            update()
         }
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         title = "Landmarks"
+        update()
+    }
+    
+    func update() {
+        guard isViewLoaded else { return }
+        present(message: viewData.errorMessage)
         tableView.reloadData()
+    }
+    
+    func present(message: String?) {
+        guard let message = message else { return }
+        let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        present(alert, animated: true)
     }
 }
 
 extension LandmarkListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return landmarks.count
+        return viewData.rows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LandmarkCell")!
-        let landmark = landmarks[indexPath.row]
+        let landmark = viewData.rows[indexPath.row]
         cell.textLabel?.text = landmark.name
         return cell
     }
@@ -43,7 +66,7 @@ extension LandmarkListViewController: UITableViewDataSource {
 extension LandmarkListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let landmark = landmarks[indexPath.row]
+        let landmark = viewData.rows[indexPath.row]
         let landmarkID = landmark.id
         delegate?.didSelectLandmark(withID: landmarkID)
         tableView.deselectRow(at: indexPath, animated: true)
