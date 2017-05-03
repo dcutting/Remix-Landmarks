@@ -7,7 +7,6 @@ public class MockLandmarkService: LandmarkService {
     public init() {}
     
     public func fetchAllLandmarks(completion: (LandmarkServiceResult) -> Void) {
-        let result = LandmarkServiceResult.success(landmarks)
-        completion(result)
+        completion(.success(landmarks))
     }
 }
