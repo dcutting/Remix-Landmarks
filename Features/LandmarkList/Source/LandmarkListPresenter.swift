@@ -1,3 +1,4 @@
+import LandmarkEntity
 import LandmarkService
 
 struct LandmarkListViewData {
