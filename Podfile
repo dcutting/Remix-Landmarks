@@ -8,6 +8,11 @@ target :Remix do
   pod 'LandmarkBrowser', :path => 'Features/LandmarkBrowser'
 end
 
+target :AcceptanceTests do
+  platform :ios, '10.3'
+  pod 'OCSlimProject'
+end
+
 target :LogicTests do
   platform :osx, '10.12'
   pod 'LandmarkService/Tests', :path => 'Services/LandmarkService'

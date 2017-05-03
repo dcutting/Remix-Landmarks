@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20160618</FitNesseVersion>
+  <rootPath>FitNesse.SuiteFitAcceptanceTests</rootPath>
+  <pageHistoryReference>
+    <name>FitNesse.SuiteFitAcceptanceTests.TestFixtures</name>
+    <date>2017-05-03T23:38:53+01:00</date>
+    <pageHistoryLink>FitNesse.SuiteFitAcceptanceTests.TestFixtures?pageHistory&amp;resultDate=20170503233853</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>228</exceptions>
+    </counts>
+    <runTimeInMillis>87</runTimeInMillis>
+  </pageHistoryReference>
+  <executionLog>
+    <testSystem>slim:./OCSlimProjectTestRunner.sh</testSystem>
+    <command>./OCSlimProjectTestRunner.sh 8090</command>
+    <exitCode>0</exitCode>
+    <stdOut>[OCSP_RUN] == RunSlimTestTargetWithSlimPort~iOS:8090 ==
+[OCSP_RUN] Info: Test System SDK Deployment Target: 10.3
+[OCSP_RUN] Info: Test System Executable Folder Path: /Users/dcutting/Library/Developer/Xcode/DerivedData/Remix-hcrrzexnvjrhnndbaermmydkeofk/Build/Products/Debug-iphonesimulator/AcceptanceTests.app
+[OCSP_RUN] Info: Simulator Device Identifier: com.apple.CoreSimulator.SimDeviceType.iPhone-7-Plus, 10.3
+[OCSP_RUN] == Start Slim Test Sytem (ios-sim version 5.0.13, Node Version: v7.9.0) ==
+[OCSP_RUN] Waiting for Slim Test System To Launch
+io.cutting.AcceptanceTests: 75796
+[OCSP_RUN] Slim System Detected (75796)
+May  3 23:38:53 Dans-MacBook-Pro assertiond[67261]: Deleted job with label: UIKitApplication:io.cutting.AcceptanceTests[0x974][67261]
+May  3 23:38:53 Dans-MacBook-Pro assertiond[67261]: Submitted job with label: UIKitApplication:io.cutting.AcceptanceTests[0x1804][67261]
+May  3 23:38:53 Dans-MacBook-Pro SpringBoard[67256]: [io.cutting.AcceptanceTests] Bootstrap complete with label: UIKitApplication:io.cutting.AcceptanceTests[0x1804][67261]
+May  3 23:39:13 Dans-MacBook-Pro SpringBoard[67256]: [Watchdog] [io.cutting.AcceptanceTests] Provision violated for watchdog process-launch: &lt;FBSProcessResourceProvision: 0x6080018e7080; allowance: &lt;; FBSProcessResourceAllowance; type: realTime; timeValue: 20.0s&gt;; violated: YES&gt;
+May  3 23:39:13 Dans-MacBook-Pro com.apple.CoreSimulator.SimDevice.F0F69392-565F-4778-96B0-99D6972444BB.launchd_sim[67230] (UIKitApplication:io.cutting.AcceptanceTests[0x1804][67261][75800]): Service exited due to Killed: 9
+May  3 23:39:13 Dans-MacBook-Pro assertiond[67261]: Deleted job with label: UIKitApplication:io.cutting.AcceptanceTests[0x1804][67261]
+May  3 23:39:13 Dans-MacBook-Pro assertiond[67261]: Ignoring assertion request named "FBSceneSnapshotAction:io.cutting.AcceptanceTests" from &lt;BSProcessHandle: 0x7f8958003dc0; SpringBoard:67256; valid: YES&gt; because process { pid -1; bundleID (null) } is unknown.
+[OCSP_RUN] Slim Test System Exited Normally
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>28437</totalRunTimeInMillis>
+</suiteResults>
+

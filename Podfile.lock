@@ -1,4 +1,5 @@
 PODS:
+  - cslim (1.1.4)
   - LandmarkBrowser (0.0.1):
     - LandmarkDetail
     - LandmarkList
@@ -18,6 +19,8 @@ PODS:
     - LandmarkEntity
     - LandmarkService/Mock
   - LoadablePodResource (0.0.1)
+  - OCSlimProject (1.3):
+    - cslim
 
 DEPENDENCIES:
   - LandmarkBrowser (from `Features/LandmarkBrowser`)
@@ -28,6 +31,7 @@ DEPENDENCIES:
   - LandmarkService/Mock (from `Services/LandmarkService`)
   - LandmarkService/Tests (from `Services/LandmarkService`)
   - LoadablePodResource (from `Utilities/LoadablePodResource`)
+  - OCSlimProject
 
 EXTERNAL SOURCES:
   LandmarkBrowser:
@@ -44,13 +48,15 @@ EXTERNAL SOURCES:
     :path: Utilities/LoadablePodResource
 
 SPEC CHECKSUMS:
+  cslim: 43442b320273abf3542b5928c97425373ba7ee0a
   LandmarkBrowser: b66f3ea688f9f9b57a5b33f83fdf314da935d1c9
   LandmarkDetail: 930d1df685ee147a8115bb19227fe242f8014362
   LandmarkEntity: 418d0795497fee22395e5f7743651ef6ddefa6d6
   LandmarkList: 67b84404e8b50130f8c46911a245163205730ca2
   LandmarkService: caae83d30e9d766f6b095e352c62ba7df53c9842
   LoadablePodResource: '04397809c6abbe73331b56d682c939cd385e371a'
+  OCSlimProject: a24337484ec168d7983ef507f75624bb8de21c15
 
-PODFILE CHECKSUM: fe85d0c73337e7a8ea6b4be56207e8181edd9f20
+PODFILE CHECKSUM: 82c52d273902d53a241541fef317b254730a39b9
 
 COCOAPODS: 1.2.1
