@@ -1,12 +1,19 @@
 import XCTest
+@testable import LandmarkEntity
 
 class MockLandmarkServiceTests: XCTestCase {
     
-    func test_mockLandmarkService_fails() {
-        XCTAssertTrue(false)
-    }
-    
-    func test_mockLandmarkService_passes() {
-        XCTAssertTrue(true)
+    func test_fetchAllLandmarks_emptyByDefault() {
+        let expect = expectation(description: "fetched")
+        let sut = MockLandmarkService()
+        sut.fetchAllLandmarks { result in
+            if case let .success(actual) = result {
+                XCTAssertEqual(0, actual.count)
+                expect.fulfill()
+            } else {
+                XCTFail()
+            }
+        }
+        waitForExpectations(timeout: 1.0)
     }
 }
