@@ -93,7 +93,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/LandmarkDetail/LandmarkDetail.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LandmarkEntity-iOS/LandmarkEntity.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LandmarkList/LandmarkList.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/LandmarkService-API-Mock/LandmarkService.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/LandmarkService.root-API-Mock/LandmarkService.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LoadablePodResource/LoadablePodResource.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -101,7 +101,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/LandmarkDetail/LandmarkDetail.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LandmarkEntity-iOS/LandmarkEntity.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LandmarkList/LandmarkList.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/LandmarkService-API-Mock/LandmarkService.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/LandmarkService.root-API-Mock/LandmarkService.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LoadablePodResource/LoadablePodResource.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

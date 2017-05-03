@@ -8,8 +8,24 @@ PODS:
     - LoadablePodResource
   - LandmarkEntity (0.0.1)
   - LandmarkList (0.0.1):
-    - LandmarkService/API
+    - LandmarkList/Fixtures (= 0.0.1)
+    - LandmarkList/Flow (= 0.0.1)
+    - LandmarkList/iOS (= 0.0.1)
+    - LandmarkList/Logic (= 0.0.1)
+  - LandmarkList/Fixtures (0.0.1):
+    - LandmarkList/Flow
+  - LandmarkList/Flow (0.0.1):
+    - LandmarkList/Logic
+  - LandmarkList/iOS (0.0.1):
+    - LandmarkList/Flow
     - LoadablePodResource
+  - LandmarkList/Logic (0.0.1):
+    - LandmarkService/API
+  - LandmarkService (0.0.1):
+    - LandmarkEntity
+    - LandmarkService/API (= 0.0.1)
+    - LandmarkService/Mock (= 0.0.1)
+    - LandmarkService/Tests (= 0.0.1)
   - LandmarkService/API (0.0.1):
     - LandmarkEntity
   - LandmarkService/Mock (0.0.1):
@@ -27,8 +43,7 @@ DEPENDENCIES:
   - LandmarkDetail (from `Features/LandmarkDetail`)
   - LandmarkEntity (from `Entities/LandmarkEntity`)
   - LandmarkList (from `Features/LandmarkList`)
-  - LandmarkService/API (from `Services/LandmarkService`)
-  - LandmarkService/Mock (from `Services/LandmarkService`)
+  - LandmarkService (from `Services/LandmarkService`)
   - LandmarkService/Tests (from `Services/LandmarkService`)
   - LoadablePodResource (from `Utilities/LoadablePodResource`)
   - OCSlimProject
@@ -52,11 +67,11 @@ SPEC CHECKSUMS:
   LandmarkBrowser: b66f3ea688f9f9b57a5b33f83fdf314da935d1c9
   LandmarkDetail: 930d1df685ee147a8115bb19227fe242f8014362
   LandmarkEntity: 418d0795497fee22395e5f7743651ef6ddefa6d6
-  LandmarkList: 67b84404e8b50130f8c46911a245163205730ca2
+  LandmarkList: fa838d0e42650b71daa0ac04ba78c99efba28d44
   LandmarkService: caae83d30e9d766f6b095e352c62ba7df53c9842
   LoadablePodResource: '04397809c6abbe73331b56d682c939cd385e371a'
   OCSlimProject: a24337484ec168d7983ef507f75624bb8de21c15
 
-PODFILE CHECKSUM: 82c52d273902d53a241541fef317b254730a39b9
+PODFILE CHECKSUM: a04aad33fafb6eaea8a1b7cfa7b9e965e4dd201a
 
 COCOAPODS: 1.2.1

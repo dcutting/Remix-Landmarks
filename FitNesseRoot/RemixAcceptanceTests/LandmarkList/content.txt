@@ -1,0 +1,10 @@
+!1 LandmarkList
+
+Fetch and display a list of landmarks.
+
+|Fixture LandmarkList|
+|input |output? |
+|foo   |bar     |
+|bar   |baz     |
+
+

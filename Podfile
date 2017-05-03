@@ -22,8 +22,7 @@ end
 
 pod 'LoadablePodResource', :path => 'Utilities/LoadablePodResource'
 pod 'LandmarkEntity', :path => 'Entities/LandmarkEntity'
-pod 'LandmarkService/API', :path => 'Services/LandmarkService'
-pod 'LandmarkService/Mock', :path => 'Services/LandmarkService'
+pod 'LandmarkService', :path => 'Services/LandmarkService'
 pod 'LandmarkList', :path => 'Features/LandmarkList'
 pod 'LandmarkDetail', :path => 'Features/LandmarkDetail'
 

@@ -13,18 +13,53 @@
   "source": {
     "path": "."
   },
-  "source_files": "Source",
-  "resource_bundles": {
-    "LandmarkList": [
-      "Resources/**/*"
-    ]
-  },
-  "dependencies": {
-    "LandmarkService/API": [
+  "subspecs": [
+    {
+      "name": "Logic",
+      "source_files": "Source/Logic",
+      "dependencies": {
+        "LandmarkService/API": [
 
-    ],
-    "LoadablePodResource": [
+        ]
+      }
+    },
+    {
+      "name": "Flow",
+      "source_files": "Source/Flow",
+      "dependencies": {
+        "LandmarkList/Logic": [
 
-    ]
-  }
+        ]
+      }
+    },
+    {
+      "name": "iOS",
+      "source_files": "Source/iOS",
+      "dependencies": {
+        "LandmarkList/Flow": [
+
+        ],
+        "LoadablePodResource": [
+
+        ]
+      },
+      "resource_bundles": {
+        "LandmarkList": [
+          "Resources/**/*"
+        ]
+      }
+    },
+    {
+      "name": "Fixtures",
+      "platforms": {
+        "ios": "10.3"
+      },
+      "source_files": "Fixtures",
+      "dependencies": {
+        "LandmarkList/Flow": [
+
+        ]
+      }
+    }
+  ]
 }
