@@ -16,7 +16,7 @@ public class LandmarkListCoordinator {
     }
     
     public func start(navigationController: UINavigationController) {
-        let landmarkListViewController = LandmarkListViewController.fromStoryboard(named: "LandmarkList", identifier: "LandmarkListViewController", bundle: "LandmarkList")
+        let landmarkListViewController = LandmarkListWireframe().makeLandmarkListViewController()
         landmarkListViewController.delegate = self
         navigationController.pushViewController(landmarkListViewController, animated: true)
         
