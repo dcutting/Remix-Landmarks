@@ -1,5 +1,5 @@
 framework module LandmarkService {
-  umbrella header "LandmarkService-umbrella.h"
+  umbrella header "LandmarkService-API-Mock-umbrella.h"
 
   export *
   module * { export * }

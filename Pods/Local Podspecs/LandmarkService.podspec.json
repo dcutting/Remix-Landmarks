@@ -13,6 +13,7 @@
   "source": {
     "path": "."
   },
+  "frameworks": "XCTest",
   "dependencies": {
     "LandmarkEntity": [
 
@@ -26,6 +27,10 @@
     {
       "name": "Mock",
       "source_files": "Source/MockLandmarkService"
+    },
+    {
+      "name": "Tests",
+      "source_files": "Tests"
     }
   ]
 }

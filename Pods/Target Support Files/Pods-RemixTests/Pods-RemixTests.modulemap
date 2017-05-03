@@ -1,0 +1,6 @@
+framework module Pods_RemixTests {
+  umbrella header "Pods-RemixTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

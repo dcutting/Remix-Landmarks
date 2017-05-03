@@ -8,10 +8,16 @@ target :Remix do
   pod 'LandmarkBrowser', :path => 'Features/LandmarkBrowser'
 end
 
+target :RemixTests do
+  pod 'LandmarkService/Tests', :path => 'Services/LandmarkService'
+end
+
 # Need to list all dependencies here so CocoaPods can find them.
+
 pod 'LoadablePodResource', :path => 'Utilities/LoadablePodResource'
 pod 'LandmarkEntity', :path => 'Entities/LandmarkEntity'
-pod 'LandmarkService', :path => 'Services/LandmarkService'
+pod 'LandmarkService/API', :path => 'Services/LandmarkService'
+pod 'LandmarkService/Mock', :path => 'Services/LandmarkService'
 pod 'LandmarkList', :path => 'Features/LandmarkList'
 pod 'LandmarkDetail', :path => 'Features/LandmarkDetail'
 
