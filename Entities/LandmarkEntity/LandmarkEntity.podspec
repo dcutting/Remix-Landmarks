@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "http://cutting.io"
   s.license      = { "type" => "MIT" }
   s.author       = "Dan Cutting"
-  s.platform     = :ios, "10.3"
+  s.platforms    = { :ios => "10.3", :osx => "10.12" }
   s.source       = { :path => '.' }
   s.source_files = "Source"
 end

@@ -8,7 +8,8 @@
   },
   "authors": "Dan Cutting",
   "platforms": {
-    "ios": "10.3"
+    "ios": "10.3",
+    "osx": "10.12"
   },
   "source": {
     "path": "."

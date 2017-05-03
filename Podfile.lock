@@ -13,6 +13,7 @@ PODS:
     - LandmarkEntity
   - LandmarkService/Mock (0.0.1):
     - LandmarkEntity
+    - LandmarkService/API
   - LandmarkService/Tests (0.0.1):
     - LandmarkEntity
     - LandmarkService/Mock
@@ -45,11 +46,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   LandmarkBrowser: b66f3ea688f9f9b57a5b33f83fdf314da935d1c9
   LandmarkDetail: 930d1df685ee147a8115bb19227fe242f8014362
-  LandmarkEntity: 5fca99d98184422dbdc5b97eb086e5026601caa7
+  LandmarkEntity: 418d0795497fee22395e5f7743651ef6ddefa6d6
   LandmarkList: 67b84404e8b50130f8c46911a245163205730ca2
-  LandmarkService: 68546fba4520de4425b3c88a1c67eb02def7ad85
+  LandmarkService: caae83d30e9d766f6b095e352c62ba7df53c9842
   LoadablePodResource: '04397809c6abbe73331b56d682c939cd385e371a'
 
-PODFILE CHECKSUM: aede2be229ea5f16298e77e3172f72f4f791c2cf
+PODFILE CHECKSUM: fe85d0c73337e7a8ea6b4be56207e8181edd9f20
 
 COCOAPODS: 1.2.1

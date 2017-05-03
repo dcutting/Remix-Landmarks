@@ -10,3 +10,7 @@
 #endif
 #endif
 
+
+FOUNDATION_EXPORT double LandmarkEntityVersionNumber;
+FOUNDATION_EXPORT const unsigned char LandmarkEntityVersionString[];
+

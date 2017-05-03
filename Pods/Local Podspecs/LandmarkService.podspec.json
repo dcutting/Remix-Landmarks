@@ -8,7 +8,8 @@
   },
   "authors": "Dan Cutting",
   "platforms": {
-    "ios": "10.3"
+    "ios": "10.3",
+    "osx": "10.12"
   },
   "source": {
     "path": "."
@@ -25,10 +26,18 @@
     },
     {
       "name": "Mock",
-      "source_files": "Source/MockLandmarkService"
+      "source_files": "Source/MockLandmarkService",
+      "dependencies": {
+        "LandmarkService/API": [
+
+        ]
+      }
     },
     {
       "name": "Tests",
+      "platforms": {
+        "osx": "10.12"
+      },
       "frameworks": "XCTest",
       "source_files": "Tests",
       "dependencies": {

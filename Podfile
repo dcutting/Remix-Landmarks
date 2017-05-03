@@ -8,7 +8,8 @@ target :Remix do
   pod 'LandmarkBrowser', :path => 'Features/LandmarkBrowser'
 end
 
-target :RemixTests do
+target :LogicTests do
+  platform :osx, '10.12'
   pod 'LandmarkService/Tests', :path => 'Services/LandmarkService'
 end
 
