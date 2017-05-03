@@ -125,10 +125,10 @@
 			buildConfigurationList = C8748D4F1EB8E2E70003E683 /* Build configuration list for PBXNativeTarget "Remix" */;
 			buildPhases = (
 				40DAC91F98D8E10C4E342824 /* [CP] Check Pods Manifest.lock */,
+				7B4D62327637F30391B3039C /* [Amimono] Create filelist per architecture */,
 				C8748D2E1EB8E2E60003E683 /* Sources */,
 				C8748D2F1EB8E2E60003E683 /* Frameworks */,
 				C8748D301EB8E2E60003E683 /* Resources */,
-				F8868D407E20911D88645F67 /* [CP] Embed Pods Frameworks */,
 				7A7369C13FA716DE5A62BB71 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -250,20 +250,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Remix/Pods-Remix-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F8868D407E20911D88645F67 /* [CP] Embed Pods Frameworks */ = {
+		7B4D62327637F30391B3039C /* [Amimono] Create filelist per architecture */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[Amimono] Create filelist per architecture";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Remix/Pods-Remix-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellPath = /bin/bash;
+			shellScript = "declare -a DEPENDENCIES=('LandmarkDetail' 'LandmarkList' 'LandmarkService' 'LoadablePodResource');\nIFS=\" \" read -r -a SPLIT <<< \"$ARCHS\"\nfor ARCH in \"${SPLIT[@]}\"; do\n  cd \"$OBJROOT/Pods.build\"\n  filelist=\"\"\n  for dependency in \"${DEPENDENCIES[@]}\"; do\n    path=\"${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${dependency}.build/Objects-normal/${ARCH}\"\n    if [ -d \"$path\" ]; then\n      search_path=\"$path/*.o\"\n      for obj_file in $search_path; do\n        filelist+=\"${OBJROOT}/Pods.build/${obj_file}\"\n        filelist+=$'\\n'\n      done\n    fi\n  done\n  filelist=${filelist%$'\\n'}\n  echo \"$filelist\" > \"${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}-${TARGET_NAME}-${ARCH}.objects.filelist\"\ndone\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
