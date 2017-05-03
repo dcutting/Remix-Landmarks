@@ -108,10 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				C8748D351EB8E2E60003E683 /* AppDelegate.swift */,
+				C8748D651EB924890003E683 /* AppCoordinator.swift */,
 				C8748D3C1EB8E2E60003E683 /* Assets.xcassets */,
 				C8748D3E1EB8E2E70003E683 /* LaunchScreen.storyboard */,
 				C8748D411EB8E2E70003E683 /* Info.plist */,
-				C8748D651EB924890003E683 /* AppCoordinator.swift */,
 			);
 			path = Remix;
 			sourceTree = "<group>";

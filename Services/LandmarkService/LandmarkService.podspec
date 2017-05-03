@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
     sp.framework = 'XCTest'
     sp.source_files = "Tests"
     sp.dependency "LandmarkService/Mock"
+    sp.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
   end
 
   s.dependency "LandmarkEntity"
