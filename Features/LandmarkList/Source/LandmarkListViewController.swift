@@ -3,17 +3,6 @@ import LoadablePodResource
 
 import UIKit
 
-struct LandmarkListViewData {
-    
-    struct Row {
-        let id: LandmarkID
-        let name: String
-    }
-
-    var errorMessage: String?
-    var rows: [Row] = []
-}
-
 protocol LandmarkListViewControllerDelegate: class {
     func didSelectLandmark(withID: LandmarkID)
 }
