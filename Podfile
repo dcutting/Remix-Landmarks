@@ -9,9 +9,9 @@ target :Remix do
 end
 
 # Need to list all dependencies here so CocoaPods can find them.
+pod 'LoadablePodResource', :path => 'Utilities/LoadablePodResource'
 pod 'LandmarkEntity', :path => 'Entities/LandmarkEntity'
 pod 'LandmarkService', :path => 'Services/LandmarkService'
-pod 'LoadablePodResource', :path => 'Services/LoadablePodResource'
 pod 'LandmarkList', :path => 'Features/LandmarkList'
 pod 'LandmarkDetail', :path => 'Features/LandmarkDetail'
 
