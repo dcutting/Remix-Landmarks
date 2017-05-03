@@ -1,3 +1,5 @@
+import LandmarkEntity
+
 public class MockLandmarkService: LandmarkService {
     
     public var landmarks: [Landmark] = []

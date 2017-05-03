@@ -1,3 +1,5 @@
+import LandmarkEntity
+
 public enum LandmarkServiceResult {
     case success([Landmark])
     case failure(Error)

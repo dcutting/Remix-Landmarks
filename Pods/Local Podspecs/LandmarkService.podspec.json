@@ -13,6 +13,11 @@
   "source": {
     "path": "."
   },
+  "dependencies": {
+    "LandmarkEntity": [
+
+    ]
+  },
   "subspecs": [
     {
       "name": "API",

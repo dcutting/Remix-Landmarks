@@ -1,4 +1,4 @@
-import LandmarkService
+import LandmarkEntity
 import LoadablePodResource
 
 public class LandmarkDetailCoordinator {

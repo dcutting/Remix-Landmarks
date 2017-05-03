@@ -1,3 +1,4 @@
+import LandmarkEntity
 import LandmarkService
 import LandmarkList
 

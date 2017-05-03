@@ -5,19 +5,24 @@ PODS:
   - LandmarkDetail (0.0.1):
     - LandmarkService/API
     - LoadablePodResource
+  - LandmarkEntity (0.0.1)
   - LandmarkList (0.0.1):
     - LandmarkService/API
     - LoadablePodResource
   - LandmarkService (0.0.1):
+    - LandmarkEntity
     - LandmarkService/API (= 0.0.1)
     - LandmarkService/Mock (= 0.0.1)
-  - LandmarkService/API (0.0.1)
-  - LandmarkService/Mock (0.0.1)
+  - LandmarkService/API (0.0.1):
+    - LandmarkEntity
+  - LandmarkService/Mock (0.0.1):
+    - LandmarkEntity
   - LoadablePodResource (0.0.1)
 
 DEPENDENCIES:
   - LandmarkBrowser (from `Features/LandmarkBrowser`)
   - LandmarkDetail (from `Features/LandmarkDetail`)
+  - LandmarkEntity (from `Entities/LandmarkEntity`)
   - LandmarkList (from `Features/LandmarkList`)
   - LandmarkService (from `Services/LandmarkService`)
   - LoadablePodResource (from `Services/LoadablePodResource`)
@@ -27,6 +32,8 @@ EXTERNAL SOURCES:
     :path: Features/LandmarkBrowser
   LandmarkDetail:
     :path: Features/LandmarkDetail
+  LandmarkEntity:
+    :path: Entities/LandmarkEntity
   LandmarkList:
     :path: Features/LandmarkList
   LandmarkService:
@@ -37,10 +44,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   LandmarkBrowser: b66f3ea688f9f9b57a5b33f83fdf314da935d1c9
   LandmarkDetail: 930d1df685ee147a8115bb19227fe242f8014362
+  LandmarkEntity: 5fca99d98184422dbdc5b97eb086e5026601caa7
   LandmarkList: 67b84404e8b50130f8c46911a245163205730ca2
-  LandmarkService: 303bf928a0d745abe045b34820d32dba736262c4
+  LandmarkService: 8415ccbe7ae99544d201e9a57f8aa5135091d780
   LoadablePodResource: '04397809c6abbe73331b56d682c939cd385e371a'
 
-PODFILE CHECKSUM: 470ee51badee345cb268df3f3733bfa19afbef10
+PODFILE CHECKSUM: 0c33c3663ed1cb0fc8e2caad74b66314aeff0590
 
 COCOAPODS: 1.2.1
