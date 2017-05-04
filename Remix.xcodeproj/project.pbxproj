@@ -59,6 +59,7 @@
 		C8901C9B1EBA8CB200CF7375 /* SlimTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlimTables.h; sourceTree = "<group>"; };
 		C8901C9C1EBA8CB200CF7375 /* AcceptanceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AcceptanceTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		C8901C9D1EBA8CB200CF7375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8901CA11EBAADE600CF7375 /* LandmarkList.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LandmarkList.framework; path = "../../../Library/Developer/Xcode/DerivedData/Remix-hcrrzexnvjrhnndbaermmydkeofk/Build/Products/Debug-iphonesimulator/LandmarkList/LandmarkList.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		732BC16B58A874A48B66B8C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C8901CA11EBAADE600CF7375 /* LandmarkList.framework */,
 				0BEA966851E53E9DDA85E349 /* Pods_Remix.framework */,
 				AA3337E069880DE14AA8A683 /* Pods_RemixTests.framework */,
 				579A96077631FC03E3BBB6B1 /* Pods_LogicTests.framework */,
@@ -836,6 +838,7 @@
 				C8901C9F1EBA8CB200CF7375 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

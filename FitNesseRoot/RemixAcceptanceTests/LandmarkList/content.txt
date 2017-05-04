@@ -2,9 +2,7 @@
 
 Fetch and display a list of landmarks.
 
-|Fixture LandmarkList|
+|Fixture Landmark List|
 |input |output? |
-|foo   |bar     |
-|bar   |baz     |
-
-
+|foo   |foo     |
+|hello |world     |

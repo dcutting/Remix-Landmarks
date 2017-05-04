@@ -43,6 +43,7 @@ DEPENDENCIES:
   - LandmarkDetail (from `Features/LandmarkDetail`)
   - LandmarkEntity (from `Entities/LandmarkEntity`)
   - LandmarkList (from `Features/LandmarkList`)
+  - LandmarkList/Fixtures (from `Features/LandmarkList`)
   - LandmarkService (from `Services/LandmarkService`)
   - LandmarkService/Tests (from `Services/LandmarkService`)
   - LoadablePodResource (from `Utilities/LoadablePodResource`)
@@ -72,6 +73,6 @@ SPEC CHECKSUMS:
   LoadablePodResource: '04397809c6abbe73331b56d682c939cd385e371a'
   OCSlimProject: a24337484ec168d7983ef507f75624bb8de21c15
 
-PODFILE CHECKSUM: a04aad33fafb6eaea8a1b7cfa7b9e965e4dd201a
+PODFILE CHECKSUM: 414f552c57866b1a0fae14501a873fdec0c7459a
 
 COCOAPODS: 1.2.1
