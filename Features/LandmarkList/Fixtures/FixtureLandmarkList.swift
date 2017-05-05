@@ -3,18 +3,25 @@ import LandmarkService
 
 var mockLandmarkService = MockLandmarkService(landmarks: [])
 
-@objc(FixtureLandmarkService)
+@objc(PopulateLandmarkService)
 
-public class FixtureLandmarkService: NSObject {
+public class PopulateLandmarkService: NSObject {
     
     var name = ""
-    var latitude = 0.0
-    var longitude = 0.0
+    var latitude = ""
+    var longitude = ""
     
     var landmarks: [Landmark] = []
+    
+    public func reset() {
+        name = ""
+        latitude = ""
+        longitude = ""
+    }
 
     public func execute() {
-        let landmark = Landmark(id: LandmarkID(), name: name, coordinate: LandmarkCoordinate(latitude: latitude, longitude: longitude))
+        guard let latitudeNumber = Double(latitude), let longitudeNumber = Double(longitude) else { return }
+        let landmark = Landmark(id: LandmarkID(), name: name, coordinate: LandmarkCoordinate(latitude: latitudeNumber, longitude: longitudeNumber))
         landmarks.append(landmark)
     }
     
