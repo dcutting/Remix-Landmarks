@@ -4,8 +4,8 @@ class LandmarkListPresenter {
     func prepare(result: LandmarkListInteractorResult) -> LandmarkListViewData {
         switch result {
         case let .success(landmarks):
-            let mapped = landmarks.map {
-                LandmarkListViewData.Row(id: $0.id, text: formattedRowText($0))
+            let mapped = landmarks.map { landmark in
+                LandmarkListViewData.Row(id: landmark.id, text: formattedRowText(for: landmark))
             }
             return LandmarkListViewData(errorMessage: nil, rows: mapped)
         case let .failure(error):
@@ -13,7 +13,7 @@ class LandmarkListPresenter {
         }
     }
     
-    func formattedRowText(_ landmark: Landmark) -> String {
+    func formattedRowText(for landmark: Landmark) -> String {
         return "\(landmark.name.uppercased()) (\(landmark.coordinate.latitude), \(landmark.coordinate.longitude))"
     }
 }
