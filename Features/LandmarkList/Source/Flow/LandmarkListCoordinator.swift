@@ -20,7 +20,7 @@ public class LandmarkListCoordinator {
     }
     
     public func start() {
-        var landmarkListView = landmarkListWireframe.makeLandmarkListView()
+        let landmarkListView = landmarkListWireframe.makeLandmarkListView()
         landmarkListView.delegate = self
         landmarkListWireframe.show(landmarkListView: landmarkListView)
         

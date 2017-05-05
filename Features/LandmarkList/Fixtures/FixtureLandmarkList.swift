@@ -1,10 +1,18 @@
 import LandmarkEntity
 import LandmarkService
 
+
+
 var mockLandmarkService = MockLandmarkService(landmarks: [])
+
 let mockLandmarkListView = MockLandmarkListView()
-var landmarkListCoordinator: LandmarkListCoordinator?
+let mockLandmarkListWireframe = MockLandmarkListWireframe(landmarkListView: mockLandmarkListView)
+
 let mockLandmarkListCoordinatorDelegate = MockLandmarkListCoordinatorDelegate()
+
+let landmarkListCoordinator = LandmarkListCoordinator(landmarkService: mockLandmarkService, landmarkListWireframe: mockLandmarkListWireframe)
+
+
 
 @objc(PopulateLandmarkService)
 
@@ -35,17 +43,27 @@ public class PopulateLandmarkService: NSObject {
     }
 }
 
+@objc(ShowLandmarkList)
+
+public class ShowLandmarkList: NSObject {
+    
+    public func showsListOnStart() -> NSNumber {
+        landmarkListCoordinator.start()
+        guard let actual = mockLandmarkListWireframe.actualShowLandmarkListView else { return false }
+        let ok = actual === mockLandmarkListView
+        return NSNumber(booleanLiteral: ok)
+    }
+}
+
 @objc(LandmarkListRows)
 
 public class LandmarkListRows: NSObject {
     
     public func query() -> [[[String]]] {
         
-        let mockLandmarkListWireframe = MockLandmarkListWireframe(landmarkListView: mockLandmarkListView)
-        landmarkListCoordinator = LandmarkListCoordinator(landmarkService: mockLandmarkService, landmarkListWireframe: mockLandmarkListWireframe)
-        landmarkListCoordinator?.delegate = mockLandmarkListCoordinatorDelegate
+        landmarkListCoordinator.delegate = mockLandmarkListCoordinatorDelegate
 
-        landmarkListCoordinator?.start()
+        landmarkListCoordinator.start()
         
         let viewData = mockLandmarkListView.viewData
         let table = viewData.rows.map { row in
@@ -78,6 +96,7 @@ class MockLandmarkListView: LandmarkListView {
 class MockLandmarkListWireframe: LandmarkListWireframe {
     
     let landmarkListView: LandmarkListView
+    var actualShowLandmarkListView: LandmarkListView?
     
     init(landmarkListView: LandmarkListView) {
         self.landmarkListView = landmarkListView
@@ -88,6 +107,7 @@ class MockLandmarkListWireframe: LandmarkListWireframe {
     }
     
     func show(landmarkListView: LandmarkListView) {
+        actualShowLandmarkListView = landmarkListView
     }
 }
 

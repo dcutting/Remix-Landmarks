@@ -1,6 +1,6 @@
 import LandmarkEntity
 
-public protocol LandmarkListView {
+public protocol LandmarkListView: class {
     var viewData: LandmarkListViewData { get set }
     weak var delegate: LandmarkListViewDelegate? { get set }
 }
