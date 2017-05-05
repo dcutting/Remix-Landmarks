@@ -24,4 +24,3 @@ extension LoadablePodResource where Self: UIViewController {
         preconditionFailure("Could not load \(identifier) from storyboard \(storyboardName) in bundle \(bundleName)")
     }
 }
-
