@@ -1,6 +1,5 @@
 import LandmarkEntity
 import LandmarkService
-import LoadablePodResource
 
 public protocol LandmarkListCoordinatorDelegate: class {
     func didSelectLandmark(withID: LandmarkID)
@@ -11,25 +10,27 @@ public class LandmarkListCoordinator {
     public weak var delegate: LandmarkListCoordinatorDelegate?
     
     let landmarkListInteractor: LandmarkListInteractor
-    
-    public init(landmarkService: LandmarkService) {
+    let landmarkListWireframe: LandmarkListWireframe
+
+    public init(landmarkService: LandmarkService, landmarkListWireframe: LandmarkListWireframe) {
         landmarkListInteractor = LandmarkListInteractor(landmarkService: landmarkService)
+        self.landmarkListWireframe = landmarkListWireframe
     }
     
-    public func start(navigationController: UINavigationController) {
-        let landmarkListViewController = LandmarkListWireframe().makeLandmarkListViewController()
-        landmarkListViewController.delegate = self
-        navigationController.pushViewController(landmarkListViewController, animated: true)
+    public func start() {
+        var landmarkListView = landmarkListWireframe.makeLandmarkListView()
+        landmarkListView.delegate = self
+        landmarkListWireframe.show(landmarkListView: landmarkListView)
         
         landmarkListInteractor.fetchAllLandmarks { result in
             let landmarkViewData = LandmarkListPresenter().prepare(result: result)
-            landmarkListViewController.viewData = landmarkViewData
+            landmarkListView.viewData = landmarkViewData
         }
     }
 }
 
-extension LandmarkListCoordinator: LandmarkListViewControllerDelegate {
-    func didSelectLandmark(withID id: LandmarkID) {
+extension LandmarkListCoordinator: LandmarkListViewDelegate {
+    public func didSelectLandmark(withID id: LandmarkID) {
         delegate?.didSelectLandmark(withID: id)
     }
 }

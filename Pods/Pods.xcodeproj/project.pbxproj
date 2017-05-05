@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000C858C439A5DB052A141920C6FDF74 /* LandmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A32339E26000046BB01822ED251BF /* LandmarkListView.swift */; };
 		03DA19E2F8EA1F56B906E573EA06E9A1 /* LandmarkDetail-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6193909133EFD761BD87EC197D14A163 /* LandmarkDetail-dummy.m */; };
+		0AB73FD8082900CC542019B2FE3F5123 /* LandmarkListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A5BD3DE49C90E7F783BB5EB80F5EB /* LandmarkListPresenter.swift */; };
 		0B7E1836982F6C95ECC6F965F444B4D1 /* SlimList.c in Sources */ = {isa = PBXBuildFile; fileRef = DBADAC186E0E7E563901C79B96097FA6 /* SlimList.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		0D5C7E446F1EB95D65765A5CABA879AD /* OCSException.m in Sources */ = {isa = PBXBuildFile; fileRef = D93EA435C055A7E6D7F2BFF46A4CB78F /* OCSException.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		0E3706EC6B5F2A03935A8D4C9AE3D410 /* SlimConnectionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 635E2906535CF96C338CE0891FF863DD /* SlimConnectionHandler.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -22,7 +24,7 @@
 		1BF0B4B0A5A4FF73C9F411B0F553C4F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91E01662811B8744E66D4B9E13D4C0A /* Foundation.framework */; };
 		1C65C3E83B75E39283AFEB402D27AAD5 /* OCSSymbolDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = A46110D31DE1B54EA58D3E37FA6B5A71 /* OCSSymbolDictionary.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1F5B1C603B1D48FDA06AAF4661A9B704 /* OCSSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7530CB6B3A21E61C2636DFE924C3DDE1 /* OCSSelector.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		208040FA708214C1B5577E06BA6D2120 /* LandmarkList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F1B7269C03B4C180BB0A0D90E4C3E8 /* LandmarkList-dummy.m */; };
+		20FF16558D0D7D68FD9979F3E5265220 /* LandmarkListViewControllerWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C1EE84AC0082DF4645B911BC1A9E5 /* LandmarkListViewControllerWireframe.swift */; };
 		21BE54C6DF561245644DC48D36AF317C /* LandmarkDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F7B22D7508850B84967E9D97EC2F6D /* LandmarkDetail.framework */; };
 		227275F6BF7D336C29D196E7847386AE /* LandmarkEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3645870D8C315F868C77371F7CABE85 /* LandmarkEntity.framework */; };
 		23025B6D64780249DCD9213451FD7DCC /* SocketServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 00971EFF09F0842AC0EEB6CC6BD09372 /* SocketServer.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -38,9 +40,9 @@
 		34B0889FCDEFD933834B5BB9A71B6903 /* OCSInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = B1030C5363882F792F23940A85B64A63 /* OCSInvocation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		37424B7EB6C79E9A80C9F62E623FACE4 /* OCSReturnValue.h in Headers */ = {isa = PBXBuildFile; fileRef = C8A02678C8A11F1AECD3C5ECAE12EB8D /* OCSReturnValue.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3CBF5CB6DF1D882DA558339F61724F10 /* OCSStatementExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F6E13313206E48080E3774CEDE245C /* OCSStatementExecutor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		45A6700F3EC62AB93C5E5D0E64F81784 /* LandmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B7DF2ACB19426F781F77A24DEC9820 /* LandmarkListViewController.swift */; };
 		465B8BCE68E937FBFD9FF410ED0F3EF9 /* LandmarkList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9B9CAD77EBDA806608B9EF5379E89D /* LandmarkList.framework */; };
 		49F95B847DB6682D7149BBB7F63486A1 /* SlimListSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 253331DA0562220F631054131B9CAF70 /* SlimListSerializer.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		55166A7DC6E6B1F434B6B3FD62E557E8 /* LandmarkListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAEE4BC2F2C5A38064CE442583858C /* LandmarkListInteractor.swift */; };
 		554C956FC8A634A7B180C918914FE9D7 /* Pods-LogicTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E55C978A3547AB768D2D3509AC58ECD /* Pods-LogicTests-dummy.m */; };
 		573872314730931F8572BC7E0B894971 /* LandmarkDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686AAF9684A6AB25EB00EDE45F8A0035 /* LandmarkDetailWireframe.swift */; };
 		57CC1F4D6FA6F2F9BE3BF462F66D1320 /* OCSReturnValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EB818172D01ED1D2AF7C53F522C619 /* OCSReturnValue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -51,13 +53,13 @@
 		61C809AE752AE9521BADC618945C50E0 /* OCSMethodCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 06621AD3BB77144B4FD8B8A7971852A7 /* OCSMethodCaller.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		63ADAC6A7802FCDB570F8F57772D53BC /* Pods-AcceptanceTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B2A23EAF18B3CC57631C37BE92C3CE /* Pods-AcceptanceTests-dummy.m */; };
 		6A4013B8B9651C1A63878BAB5EB11486 /* LandmarkEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3645870D8C315F868C77371F7CABE85 /* LandmarkEntity.framework */; };
+		6AA892E157673E8137B804E95A2981F8 /* LandmarkListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108462211A48E3B79A40B4A745483147 /* LandmarkListWireframe.swift */; };
 		6C9F3717CE27D1B3B8DAFAEAB9C62793 /* Pods-LogicTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE3563B29BEA119A66A3C3E79BBDFAB /* Pods-LogicTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D60D0FE5A17BD84880C40517424A3CB /* TcpComLink.h in Headers */ = {isa = PBXBuildFile; fileRef = EC24D6B6E532DB91E42BCDF1A6798E35 /* TcpComLink.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		72363282A19E54D431D592D1C097FC67 /* Slim.h in Headers */ = {isa = PBXBuildFile; fileRef = BF10364A71217FD233897ED839DAF920 /* Slim.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		730BF7BF3FD6FFBEB38B171E17351754 /* LandmarkService.root-API-Mock-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7651BA2E49BBD9E41F7CEEF5D7D20E /* LandmarkService.root-API-Mock-dummy.m */; };
 		73FEF7BE8D0E6144BE3DCA02B99BF60C /* LandmarkEntity-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B6F1FBD0D8BC047464AEA83EE80EF651 /* LandmarkEntity-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75396C178A777EA6534D40045DEDF676 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91E01662811B8744E66D4B9E13D4C0A /* Foundation.framework */; };
-		7664529249629324CDF3FDDD5E9E2DD2 /* LandmarkListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEAEE4BC2F2C5A38064CE442583858C /* LandmarkListInteractor.swift */; };
 		768BDD01D163A9ABAD30B8C4A03357F4 /* LandmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DB32A1D8CBFCE1014C3862C7D3D39F /* LandmarkService.swift */; };
 		7BC5800A93D92CC6DCFE84FEBC070D5E /* LandmarkService-API-Mock-Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B812416A26D482460B62FA8E1A0D055E /* LandmarkService-API-Mock-Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C06BCFDF6500144EBF13A9C8E54E138 /* LoadablePodResource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54FC5CFA68E20DDCEDCBA4B1B8923BC /* LoadablePodResource.framework */; };
@@ -67,9 +69,8 @@
 		8409E1370248C6B06562191CB36C314A /* LandmarkService.root-API-Mock-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0EEACDB8DDD4A8F49EEEBAD589F321 /* LandmarkService.root-API-Mock-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88B33F82FEF66EFF202225FB1307835B /* OCSlimToObjectiveCBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C344919E2E26A41E5A1545E2B4F3DCAB /* OCSlimToObjectiveCBridge.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		8A8591E44286C4A1C84842E3F22BC130 /* OCSSymbolDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3779B4BBEC838962BBCAA7D31E9F432C /* OCSSymbolDictionary.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		8EE4668DC9EFEE6BE2DF7CAF63422832 /* FixtureLandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42381AC7B10A57C1B624F3C4E15A4911 /* FixtureLandmarkList.swift */; };
+		8F294D17066A18D628EF8B4645FC5026 /* LandmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C95B63829DE30918F23D6EE6538B14 /* LandmarkListViewController.swift */; };
 		952834A80B8329B76E74FFFB65E898F9 /* LandmarkEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3645870D8C315F868C77371F7CABE85 /* LandmarkEntity.framework */; };
-		95997B9624AED74D8B1EDA75ECCC31BA /* LandmarkListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0823F66323F724CA4E3D5B52543D3 /* LandmarkListCoordinator.swift */; };
 		95F3D7F5158DB860A649CF377624C0E3 /* OCSObjectiveCtoCBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = F11118491ADAA7AF5E3EFD2D923C89DB /* OCSObjectiveCtoCBridge.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		971522B61CD51D6B75002AACE047B029 /* LoadablePodResource-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F88DF383292F88906B646BDA11436310 /* LoadablePodResource-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A7AAF9A5047D4824FD3028E9ADC47B1 /* LandmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DB32A1D8CBFCE1014C3862C7D3D39F /* LandmarkService.swift */; };
@@ -77,7 +78,6 @@
 		9DD60853C94F3773296F660B52062B6B /* LandmarkList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E01B8C1C9E3FE067C99AAFD98BAEC9F /* LandmarkList.storyboard */; };
 		9E165706495644F660BDCDC1E51DE7F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91E01662811B8744E66D4B9E13D4C0A /* Foundation.framework */; };
 		9E8A9F16CF3B89F9CC77DA2EC74AD4B3 /* cslim-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AAD61848D5F01AF60AC525BAB8DD242 /* cslim-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F54FFA6C70930484340A360845FB75B /* LandmarkListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A5BD3DE49C90E7F783BB5EB80F5EB /* LandmarkListPresenter.swift */; };
 		A04775E7707909ADFB8E15530E85B68B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91E01662811B8744E66D4B9E13D4C0A /* Foundation.framework */; };
 		A43FD68A151B1C5A4241BCD62F7DDCF3 /* SlimListDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = E38CA7D9787AFF9AE827AF6577C24359 /* SlimListDeserializer.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A7BA0B2C9471BE027BA61C1CA2885352 /* StatementExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A98C75762D5F0270C6B661EACC68AE /* StatementExecutor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -91,14 +91,15 @@
 		BD0131D3F904BC0250402D6F6D55B575 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350C0A0B3BBCE4F667B209F3669AB9D0 /* Cocoa.framework */; };
 		C0741B28D39BF29E5AF4A0016D0773DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350C0A0B3BBCE4F667B209F3669AB9D0 /* Cocoa.framework */; };
 		C2EADFC02E9D4100484F0BB68ACD99A9 /* LandmarkDetail-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FE9628ABFB36267A2970CFD16C9EC65 /* LandmarkDetail-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C93BED60E8E09DC572C31DA5BA5CFBD0 /* LandmarkListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD0CC41AEFE221A033B3DAA9642B6A5 /* LandmarkListWireframe.swift */; };
 		C98A7092210E2919CCCAEC08B46F12DC /* OCSInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AB0484A59DEB9E4835CCF786A1842A /* OCSInvocation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		CC26C38E72D70F67F48AB95F04207C08 /* LandmarkDetail.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0931B356BAAA0446A54D21B258E0D24E /* LandmarkDetail.bundle */; };
 		D00914806A449D01DD57F5CFD108ED77 /* MockLandmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7325887AEDE3B969D7A0B30C526C2F4 /* MockLandmarkService.swift */; };
 		D040CAC9E74E8A5FA30361EC6063E9E5 /* MockLandmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7325887AEDE3B969D7A0B30C526C2F4 /* MockLandmarkService.swift */; };
 		D15DE17689D98D6D3F49B8350D61479A /* Fixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6B23A08905A3866014F5850E1E274D /* Fixtures.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D55122AFC683D00E26C993684573CFB2 /* LandmarkList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F1B7269C03B4C180BB0A0D90E4C3E8 /* LandmarkList-dummy.m */; };
 		D5D81AC33A4EF14E8CF4955D64CA8B15 /* ListExecutor.c in Sources */ = {isa = PBXBuildFile; fileRef = EE29200EC0B682A6A49E5034795E022D /* ListExecutor.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		D7AD71041ABEF13DB7E6BB5DDB0FA66C /* LandmarkEntity-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA53F3AFDF51DBAEDB5025D01E47BB3 /* LandmarkEntity-iOS-dummy.m */; };
+		DA4D94F30BEBDE6F1C0D43751AF20085 /* LandmarkListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE2838D60CF6AB9431D954163EC7685 /* LandmarkListCoordinator.swift */; };
 		DAB81434580BB8B9E75DEDB1F6FEA1CF /* LandmarkService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B09D26D0599C326B69CCE55CE195DA3 /* LandmarkService.framework */; };
 		DDA11E0EBC8AD949F4C993628DBDEA2D /* LandmarkBrowserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C177E2299AF52B518754BD764992F09 /* LandmarkBrowserCoordinator.swift */; };
 		DEAC5FDE55BE0FDB057629BBF06A5611 /* LandmarkEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3645870D8C315F868C77371F7CABE85 /* LandmarkEntity.framework */; };
@@ -106,6 +107,7 @@
 		DF691E88255BC52B82F8B790E8B5AEA0 /* OCSSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = B809D45DF11CBA9D5AD7F019AC3C1F62 /* OCSSelector.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E23D697CF3DFA001839E006270591F24 /* LandmarkEntity-OSX-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ACB494D11B7062F556492CACD3142B0 /* LandmarkEntity-OSX-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E795D246723D252B52F3CBB43C164BFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91E01662811B8744E66D4B9E13D4C0A /* Foundation.framework */; };
+		E9B6125E0DE0D269BAD73715BC128A00 /* FixtureLandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42381AC7B10A57C1B624F3C4E15A4911 /* FixtureLandmarkList.swift */; };
 		EB1D518FD6F2B00E27679F59C7F8FF08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91E01662811B8744E66D4B9E13D4C0A /* Foundation.framework */; };
 		EC1464F4D53EE0CB6AB86F46C3640647 /* LandmarkDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3EC804CD9CFB5A1E39E9754CEF79E /* LandmarkDetailCoordinator.swift */; };
 		EF5DF8AF285A999CB69A371435D93B70 /* OCSInstanceCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = C44B8F4E2990BD6BE0743D597DFE4E62 /* OCSInstanceCreator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -338,7 +340,7 @@
 		0931B356BAAA0446A54D21B258E0D24E /* LandmarkDetail.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LandmarkDetail.bundle; path = LandmarkDetail.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAD61848D5F01AF60AC525BAB8DD242 /* cslim-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "cslim-umbrella.h"; sourceTree = "<group>"; };
 		0B44F543EFE39FF1A68DDDEF8FAC7F21 /* Pods-Remix-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Remix-acknowledgements.markdown"; sourceTree = "<group>"; };
-		14B7DF2ACB19426F781F77A24DEC9820 /* LandmarkListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkListViewController.swift; sourceTree = "<group>"; };
+		108462211A48E3B79A40B4A745483147 /* LandmarkListWireframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkListWireframe.swift; sourceTree = "<group>"; };
 		154A5BD3DE49C90E7F783BB5EB80F5EB /* LandmarkListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkListPresenter.swift; sourceTree = "<group>"; };
 		16A190F4E273F7232037DE5036BBD3C6 /* TcpComLink.c */ = {isa = PBXFileReference; includeInIndex = 1; name = TcpComLink.c; path = src/Com/TcpComLink.c; sourceTree = "<group>"; };
 		16E0CA6B542B8CBD3BBB13615C962DC9 /* Pods-Remix-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Remix-dummy.m"; sourceTree = "<group>"; };
@@ -346,7 +348,6 @@
 		196A6B3E36804F1D793DE19002095E8F /* LandmarkEntity-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "LandmarkEntity-iOS.xcconfig"; path = "../LandmarkEntity-iOS/LandmarkEntity-iOS.xcconfig"; sourceTree = "<group>"; };
 		19E208933E5611BF881D3A94A07FD9FE /* Pods-AcceptanceTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AcceptanceTests-resources.sh"; sourceTree = "<group>"; };
 		1ADB934926EA981042CE7DB37B006A90 /* SlimUtil.c */ = {isa = PBXFileReference; includeInIndex = 1; name = SlimUtil.c; path = src/CSlim/SlimUtil.c; sourceTree = "<group>"; };
-		1BD0CC41AEFE221A033B3DAA9642B6A5 /* LandmarkListWireframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkListWireframe.swift; sourceTree = "<group>"; };
 		1C39C92283E8987698F64A26D641B858 /* Pods_Remix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Remix.framework; path = "Pods-Remix.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20ADBBAD650F07227A251A91863E4FCA /* Pods-Remix-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Remix-frameworks.sh"; sourceTree = "<group>"; };
 		20E47D428A11E62953FDE0296E7C395E /* Pods-Remix.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Remix.modulemap"; sourceTree = "<group>"; };
@@ -386,6 +387,7 @@
 		5F56FDD30CB6DCF393B6A6B9CE0F7677 /* ListExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ListExecutor.h; path = include/CSlim/ListExecutor.h; sourceTree = "<group>"; };
 		6193909133EFD761BD87EC197D14A163 /* LandmarkDetail-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LandmarkDetail-dummy.m"; sourceTree = "<group>"; };
 		62B2A23EAF18B3CC57631C37BE92C3CE /* Pods-AcceptanceTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AcceptanceTests-dummy.m"; sourceTree = "<group>"; };
+		62C95B63829DE30918F23D6EE6538B14 /* LandmarkListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkListViewController.swift; sourceTree = "<group>"; };
 		635A0FF75E922D5B084FD6E31B339D79 /* LoadablePodResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoadablePodResource.swift; sourceTree = "<group>"; };
 		635E2906535CF96C338CE0891FF863DD /* SlimConnectionHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlimConnectionHandler.h; path = include/CSlim/SlimConnectionHandler.h; sourceTree = "<group>"; };
 		640308F84AA30EA67CE39F98778A5D19 /* LandmarkDetail.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LandmarkDetail.xcconfig; sourceTree = "<group>"; };
@@ -428,9 +430,9 @@
 		9AE2B5F2867DBF8798BA84D864CCD4D6 /* LoadablePodResource.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LoadablePodResource.modulemap; sourceTree = "<group>"; };
 		9D60B9D6714DDAD5C9A860335ECE8BEE /* Pods-LogicTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LogicTests-resources.sh"; sourceTree = "<group>"; };
 		9F58F7CB5708E889A75A8DD56A63322C /* OCSStatementExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCSStatementExecutor.h; path = include/ExecutorObjectiveC/OCSStatementExecutor.h; sourceTree = "<group>"; };
-		9FD0823F66323F724CA4E3D5B52543D3 /* LandmarkListCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkListCoordinator.swift; sourceTree = "<group>"; };
 		9FFB0492E49A39809F49DD2A3B91EB5D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0C79BD013D3809CA37AC93368FD131B /* LandmarkList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LandmarkList.framework; path = LandmarkList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44C1EE84AC0082DF4645B911BC1A9E5 /* LandmarkListViewControllerWireframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkListViewControllerWireframe.swift; sourceTree = "<group>"; };
 		A46110D31DE1B54EA58D3E37FA6B5A71 /* OCSSymbolDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCSSymbolDictionary.h; path = include/ExecutorObjectiveC/OCSSymbolDictionary.h; sourceTree = "<group>"; };
 		A4DB32A1D8CBFCE1014C3862C7D3D39F /* LandmarkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkService.swift; sourceTree = "<group>"; };
 		A71C3980B72E73839A93A489D044EDE8 /* Pods-Remix-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Remix-umbrella.h"; sourceTree = "<group>"; };
@@ -466,6 +468,7 @@
 		CB3E8278DB8A3555369176715DA539EA /* Pods_AcceptanceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AcceptanceTests.framework; path = "Pods-AcceptanceTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0EEACDB8DDD4A8F49EEEBAD589F321 /* LandmarkService.root-API-Mock-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LandmarkService.root-API-Mock-umbrella.h"; path = "../LandmarkService.root-API-Mock/LandmarkService.root-API-Mock-umbrella.h"; sourceTree = "<group>"; };
 		CDE3563B29BEA119A66A3C3E79BBDFAB /* Pods-LogicTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LogicTests-umbrella.h"; sourceTree = "<group>"; };
+		CEE2838D60CF6AB9431D954163EC7685 /* LandmarkListCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkListCoordinator.swift; sourceTree = "<group>"; };
 		D00401E998D44BB4DA56211A8F1FA123 /* LandmarkEntity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LandmarkEntity.framework; path = "LandmarkEntity-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B26533372AADFDED68781DCBA44DB0 /* LandmarkDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkDetailViewController.swift; sourceTree = "<group>"; };
 		D110C14942B30EA5C9F7D88AF8319DFA /* OCSlimProject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCSlimProject.h; path = Pod/Classes/OCSlimProject.h; sourceTree = "<group>"; };
@@ -494,6 +497,7 @@
 		F0A7E5E4238CE278DB085353CE6C27BD /* SlimList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlimList.h; path = include/CSlim/SlimList.h; sourceTree = "<group>"; };
 		F11118491ADAA7AF5E3EFD2D923C89DB /* OCSObjectiveCtoCBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCSObjectiveCtoCBridge.h; path = include/ExecutorObjectiveC/OCSObjectiveCtoCBridge.h; sourceTree = "<group>"; };
 		F3B513B330A58788772098E24B8E91DE /* Pods-AcceptanceTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AcceptanceTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F51A32339E26000046BB01822ED251BF /* LandmarkListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LandmarkListView.swift; sourceTree = "<group>"; };
 		F622988E144D082538E8E26BFF5E8D73 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F79A3CE49BCA6019E356CD0E81435197 /* Pods_LogicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LogicTests.framework; path = "Pods-LogicTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F864890ADE3AB95C6049751CB7592C15 /* Pods-Remix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Remix.release.xcconfig"; sourceTree = "<group>"; };
@@ -631,6 +635,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02234DFAEC9324D98625ED47B5245A21 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				CEE2838D60CF6AB9431D954163EC7685 /* LandmarkListCoordinator.swift */,
+				F51A32339E26000046BB01822ED251BF /* LandmarkListView.swift */,
+				108462211A48E3B79A40B4A745483147 /* LandmarkListWireframe.swift */,
+			);
+			name = Flow;
+			path = Flow;
+			sourceTree = "<group>";
+		};
 		0705AA5DBB4B1D925EEB07F7131FA6FC /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -638,16 +653,6 @@
 			);
 			name = Source;
 			path = Source;
-			sourceTree = "<group>";
-		};
-		082175864638FD95B20BD0AC0807C504 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				14B7DF2ACB19426F781F77A24DEC9820 /* LandmarkListViewController.swift */,
-				1BD0CC41AEFE221A033B3DAA9642B6A5 /* LandmarkListWireframe.swift */,
-			);
-			name = iOS;
-			path = iOS;
 			sourceTree = "<group>";
 		};
 		0AD78126E3B77CEC51AEA85590947229 /* API */ = {
@@ -690,10 +695,20 @@
 			path = OCSlimProject;
 			sourceTree = "<group>";
 		};
+		1738713C0C11C146F111D305C5597AB7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				62C95B63829DE30918F23D6EE6538B14 /* LandmarkListViewController.swift */,
+				A44C1EE84AC0082DF4645B911BC1A9E5 /* LandmarkListViewControllerWireframe.swift */,
+			);
+			name = iOS;
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		17F8AF287692A2314135F98C4518F60E /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				7959C35DF6D912ADD95E967033A7063C /* Source */,
+				55A1EC9590C34B320EC75ECEC6991191 /* Source */,
 			);
 			name = Flow;
 			sourceTree = "<group>";
@@ -871,6 +886,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		55A1EC9590C34B320EC75ECEC6991191 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				02234DFAEC9324D98625ED47B5245A21 /* Flow */,
+			);
+			name = Source;
+			path = Source;
+			sourceTree = "<group>";
+		};
 		55F12CB0C120ADC691C10E21BFE52906 /* LandmarkDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -910,15 +934,6 @@
 			);
 			name = LandmarkList;
 			path = ../Features/LandmarkList;
-			sourceTree = "<group>";
-		};
-		7959C35DF6D912ADD95E967033A7063C /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				C024FA24DBDE0AB9CC12F8305681877D /* Flow */,
-			);
-			name = Source;
-			path = Source;
 			sourceTree = "<group>";
 		};
 		7C46D2550290EE730E6C481F8CB3C827 /* Support Files */ = {
@@ -1062,7 +1077,7 @@
 		AF7A7F5D6F35414B9EA22F2F4B20613E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				082175864638FD95B20BD0AC0807C504 /* iOS */,
+				1738713C0C11C146F111D305C5597AB7 /* iOS */,
 			);
 			name = Source;
 			path = Source;
@@ -1132,15 +1147,6 @@
 			);
 			name = Logic;
 			path = Logic;
-			sourceTree = "<group>";
-		};
-		C024FA24DBDE0AB9CC12F8305681877D /* Flow */ = {
-			isa = PBXGroup;
-			children = (
-				9FD0823F66323F724CA4E3D5B52543D3 /* LandmarkListCoordinator.swift */,
-			);
-			name = Flow;
-			path = Flow;
 			sourceTree = "<group>";
 		};
 		C0959501657F5F62E0E44856337521B9 /* LandmarkBrowser */ = {
@@ -1542,7 +1548,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E61F90964636023FB4D0ED2336221267 /* Build configuration list for PBXNativeTarget "LandmarkList" */;
 			buildPhases = (
-				CB4F516B30B0DC06EAA8DC68F312C055 /* Sources */,
+				AB51ECB4FBF9D14F1C40CC4B7D57BF1D /* Sources */,
 				4BCBAF3CA551C18C6363A68A755AC087 /* Frameworks */,
 				EF05C5B844A9A3307A38929783B62732 /* Resources */,
 				4723B40313B245DED002F780C1A4D672 /* Headers */,
@@ -1812,6 +1818,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AB51ECB4FBF9D14F1C40CC4B7D57BF1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9B6125E0DE0D269BAD73715BC128A00 /* FixtureLandmarkList.swift in Sources */,
+				D55122AFC683D00E26C993684573CFB2 /* LandmarkList-dummy.m in Sources */,
+				DA4D94F30BEBDE6F1C0D43751AF20085 /* LandmarkListCoordinator.swift in Sources */,
+				55166A7DC6E6B1F434B6B3FD62E557E8 /* LandmarkListInteractor.swift in Sources */,
+				0AB73FD8082900CC542019B2FE3F5123 /* LandmarkListPresenter.swift in Sources */,
+				000C858C439A5DB052A141920C6FDF74 /* LandmarkListView.swift in Sources */,
+				8F294D17066A18D628EF8B4645FC5026 /* LandmarkListViewController.swift in Sources */,
+				20FF16558D0D7D68FD9979F3E5265220 /* LandmarkListViewControllerWireframe.swift in Sources */,
+				6AA892E157673E8137B804E95A2981F8 /* LandmarkListWireframe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA4DED52BBBFAC366C6EB3B1DB179250 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1839,20 +1861,6 @@
 				23025B6D64780249DCD9213451FD7DCC /* SocketServer.c in Sources */,
 				A7BA0B2C9471BE027BA61C1CA2885352 /* StatementExecutor.m in Sources */,
 				587B431E0631DB50B95AD7216A1DD686 /* TcpComLink.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB4F516B30B0DC06EAA8DC68F312C055 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8EE4668DC9EFEE6BE2DF7CAF63422832 /* FixtureLandmarkList.swift in Sources */,
-				208040FA708214C1B5577E06BA6D2120 /* LandmarkList-dummy.m in Sources */,
-				95997B9624AED74D8B1EDA75ECCC31BA /* LandmarkListCoordinator.swift in Sources */,
-				7664529249629324CDF3FDDD5E9E2DD2 /* LandmarkListInteractor.swift in Sources */,
-				9F54FFA6C70930484340A360845FB75B /* LandmarkListPresenter.swift in Sources */,
-				45A6700F3EC62AB93C5E5D0E64F81784 /* LandmarkListViewController.swift in Sources */,
-				C93BED60E8E09DC572C31DA5BA5CFBD0 /* LandmarkListWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

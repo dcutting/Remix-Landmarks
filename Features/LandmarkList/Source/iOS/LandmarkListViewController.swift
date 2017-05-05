@@ -1,17 +1,12 @@
-import LandmarkEntity
 import LoadablePodResource
 
 import UIKit
 
-protocol LandmarkListViewControllerDelegate: class {
-    func didSelectLandmark(withID: LandmarkID)
-}
-
-class LandmarkListViewController: UIViewController, LoadablePodResource {
+class LandmarkListViewController: UIViewController, LandmarkListView, LoadablePodResource {
     
     @IBOutlet weak var tableView: UITableView!
 
-    weak var delegate: LandmarkListViewControllerDelegate?
+    weak var delegate: LandmarkListViewDelegate?
     
     var viewData = LandmarkListViewData() {
         didSet {

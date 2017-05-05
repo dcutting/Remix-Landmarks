@@ -11,12 +11,13 @@ public class LandmarkBrowserCoordinator {
     
     public init(navigationController: UINavigationController, landmarkService: LandmarkService) {
         self.navigationController = navigationController
-        landmarkListCoordinator = LandmarkListCoordinator(landmarkService: landmarkService)
+        let landmarkListWireframe = LandmarkListViewControllerWireframe(navigationController: navigationController)
+        landmarkListCoordinator = LandmarkListCoordinator(landmarkService: landmarkService, landmarkListWireframe: landmarkListWireframe)
     }
     
     public func start() {
         landmarkListCoordinator.delegate = self
-        landmarkListCoordinator.start(navigationController: navigationController)
+        landmarkListCoordinator.start()
     }
 }
 

@@ -1,16 +1,4 @@
 import LandmarkEntity
-import LandmarkService
-
-struct LandmarkListViewData {
-    
-    struct Row {
-        let id: LandmarkID
-        let name: String
-    }
-    
-    var errorMessage: String?
-    var rows: [Row] = []
-}
 
 class LandmarkListPresenter {
     func prepare(result: LandmarkListInteractorResult) -> LandmarkListViewData {
