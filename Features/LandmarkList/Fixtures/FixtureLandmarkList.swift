@@ -20,21 +20,13 @@ public class PopulateLandmarkService: NSObject {
     
     var id = ""
     var name = ""
-    var latitude = ""
-    var longitude = ""
+    var latitude: NSNumber = 0.0
+    var longitude: NSNumber = 0.0
     
     var landmarks: [Landmark] = []
-    
-    public func reset() {
-        id = ""
-        name = ""
-        latitude = ""
-        longitude = ""
-    }
 
     public func execute() {
-        guard let latitudeNumber = Double(latitude), let longitudeNumber = Double(longitude) else { return }
-        let landmark = Landmark(id: id, name: name, coordinate: LandmarkCoordinate(latitude: latitudeNumber, longitude: longitudeNumber))
+        let landmark = Landmark(id: id, name: name, coordinate: LandmarkCoordinate(latitude: latitude.doubleValue, longitude: longitude.doubleValue))
         landmarks.append(landmark)
     }
     
@@ -77,12 +69,11 @@ public class LandmarkListRows: NSObject {
 
 public class SelectRow: NSObject {
     
-    var row = ""
+    var row: NSNumber = 0
     var delegateToldID = ""
     
     public func execute() {
-        guard let rowValue = Int(row) else { return }
-        mockLandmarkListView.delegate?.didSelect(row: rowValue)
+        mockLandmarkListView.delegate?.didSelect(row: row.intValue)
         guard let id = mockLandmarkListCoordinatorDelegate.landmarkID else { return }
         delegateToldID = id
     }
