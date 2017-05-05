@@ -17,5 +17,5 @@ public struct LandmarkListViewData {
 }
 
 public protocol LandmarkListViewDelegate: class {
-    func didSelectLandmark(withID: LandmarkID)
+    func didSelect(row: Int)
 }

@@ -28,8 +28,8 @@ import UIKit
     }
     
     func makeLandmarkService() -> LandmarkService {
-        let london = Landmark(id: LandmarkID(), name: "London", coordinate: LandmarkCoordinate(latitude: 51.5, longitude: 0.1))
-        let paris = Landmark(id: LandmarkID(), name: "Paris", coordinate: LandmarkCoordinate(latitude: 48.8, longitude: 2.3))
+        let london = Landmark(id: LandmarkID("london"), name: "London", coordinate: LandmarkCoordinate(latitude: 51.5, longitude: 0.1))
+        let paris = Landmark(id: LandmarkID("paris"), name: "Paris", coordinate: LandmarkCoordinate(latitude: 48.8, longitude: 2.3))
         let landmarks = [london, paris]
         let landmarkService = MockLandmarkService(landmarks: landmarks)
         return landmarkService

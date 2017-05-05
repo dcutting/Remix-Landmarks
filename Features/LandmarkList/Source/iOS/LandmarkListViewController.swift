@@ -50,9 +50,7 @@ extension LandmarkListViewController: UITableViewDataSource {
 extension LandmarkListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let landmark = viewData.rows[indexPath.row]
-        let landmarkID = landmark.id
-        delegate?.didSelectLandmark(withID: landmarkID)
+        delegate?.didSelect(row: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

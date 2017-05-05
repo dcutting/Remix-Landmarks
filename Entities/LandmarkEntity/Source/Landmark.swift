@@ -1,4 +1,4 @@
-public typealias LandmarkID = UUID
+public typealias LandmarkID = String
 
 public struct LandmarkCoordinate {
     public let latitude: Double

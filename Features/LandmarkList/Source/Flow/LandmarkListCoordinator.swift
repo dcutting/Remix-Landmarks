@@ -12,6 +12,8 @@ public class LandmarkListCoordinator {
     let landmarkListInteractor: LandmarkListInteractor
     let landmarkListWireframe: LandmarkListWireframe
 
+    var viewData: LandmarkListViewData?
+    
     public init(landmarkService: LandmarkService, landmarkListWireframe: LandmarkListWireframe) {
         landmarkListInteractor = LandmarkListInteractor(landmarkService: landmarkService)
         self.landmarkListWireframe = landmarkListWireframe
@@ -24,13 +26,15 @@ public class LandmarkListCoordinator {
         
         landmarkListInteractor.fetchAllLandmarks { result in
             let landmarkViewData = LandmarkListPresenter().prepare(result: result)
+            self.viewData = landmarkViewData
             landmarkListView.viewData = landmarkViewData
         }
     }
 }
 
 extension LandmarkListCoordinator: LandmarkListViewDelegate {
-    public func didSelectLandmark(withID id: LandmarkID) {
-        delegate?.didSelectLandmark(withID: id)
+    public func didSelect(row: Int) {
+        guard let landmarkID = viewData?.rows[row].id else { return }
+        delegate?.didSelectLandmark(withID: landmarkID)
     }
 }

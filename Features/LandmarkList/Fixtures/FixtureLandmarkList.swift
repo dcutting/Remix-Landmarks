@@ -2,11 +2,15 @@ import LandmarkEntity
 import LandmarkService
 
 var mockLandmarkService = MockLandmarkService(landmarks: [])
+let mockLandmarkListView = MockLandmarkListView()
+var landmarkListCoordinator: LandmarkListCoordinator?
+let mockLandmarkListCoordinatorDelegate = MockLandmarkListCoordinatorDelegate()
 
 @objc(PopulateLandmarkService)
 
 public class PopulateLandmarkService: NSObject {
     
+    var id = ""
     var name = ""
     var latitude = ""
     var longitude = ""
@@ -14,6 +18,7 @@ public class PopulateLandmarkService: NSObject {
     var landmarks: [Landmark] = []
     
     public func reset() {
+        id = ""
         name = ""
         latitude = ""
         longitude = ""
@@ -21,7 +26,7 @@ public class PopulateLandmarkService: NSObject {
 
     public func execute() {
         guard let latitudeNumber = Double(latitude), let longitudeNumber = Double(longitude) else { return }
-        let landmark = Landmark(id: LandmarkID(), name: name, coordinate: LandmarkCoordinate(latitude: latitudeNumber, longitude: longitudeNumber))
+        let landmark = Landmark(id: id, name: name, coordinate: LandmarkCoordinate(latitude: latitudeNumber, longitude: longitudeNumber))
         landmarks.append(landmark)
     }
     
@@ -36,17 +41,32 @@ public class LandmarkListRows: NSObject {
     
     public func query() -> [[[String]]] {
         
-        let mockLandmarkListView = MockLandmarkListView()
         let mockLandmarkListWireframe = MockLandmarkListWireframe(landmarkListView: mockLandmarkListView)
-        let landmarkListCoordinator = LandmarkListCoordinator(landmarkService: mockLandmarkService, landmarkListWireframe: mockLandmarkListWireframe)
+        landmarkListCoordinator = LandmarkListCoordinator(landmarkService: mockLandmarkService, landmarkListWireframe: mockLandmarkListWireframe)
+        landmarkListCoordinator?.delegate = mockLandmarkListCoordinatorDelegate
 
-        landmarkListCoordinator.start()
+        landmarkListCoordinator?.start()
         
         let viewData = mockLandmarkListView.viewData
         let table = viewData.rows.map { row in
             [ [ "row text", row.text ] ]
         }
         return table
+    }
+}
+
+@objc(SelectRow)
+
+public class SelectRow: NSObject {
+    
+    var row = ""
+    var delegateToldID = ""
+    
+    public func execute() {
+        guard let rowValue = Int(row) else { return }
+        mockLandmarkListView.delegate?.didSelect(row: rowValue)
+        guard let id = mockLandmarkListCoordinatorDelegate.landmarkID else { return }
+        delegateToldID = id
     }
 }
 
@@ -66,7 +86,16 @@ class MockLandmarkListWireframe: LandmarkListWireframe {
     func makeLandmarkListView() -> LandmarkListView {
         return landmarkListView
     }
-
+    
     func show(landmarkListView: LandmarkListView) {
+    }
+}
+
+class MockLandmarkListCoordinatorDelegate: LandmarkListCoordinatorDelegate {
+    
+    var landmarkID: LandmarkID?
+    
+    func didSelectLandmark(withID landmarkID: LandmarkID) {
+        self.landmarkID = landmarkID
     }
 }
