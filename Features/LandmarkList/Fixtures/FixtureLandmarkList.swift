@@ -9,7 +9,6 @@ let mockLandmarkListView = MockLandmarkListView()
 let mockLandmarkListWireframe = MockLandmarkListWireframe(landmarkListView: mockLandmarkListView)
 
 let mockLandmarkListCoordinatorDelegate = MockLandmarkListCoordinatorDelegate()
-
 let landmarkListCoordinator = LandmarkListCoordinator(landmarkService: mockLandmarkService, landmarkListWireframe: mockLandmarkListWireframe)
 
 
@@ -35,17 +34,23 @@ public class PopulateLandmarkService: NSObject {
     }
 }
 
+
+
 @objc(ShowLandmarkList)
 
 public class ShowLandmarkList: NSObject {
     
     public func showsListOnStart() -> NSNumber {
+
         landmarkListCoordinator.start()
+        
         guard let actual = mockLandmarkListWireframe.actualShowLandmarkListView else { return false }
         let ok = actual === mockLandmarkListView
         return NSNumber(booleanLiteral: ok)
     }
 }
+
+
 
 @objc(LandmarkListRows)
 
@@ -65,6 +70,8 @@ public class LandmarkListRows: NSObject {
     }
 }
 
+
+
 @objc(SelectRow)
 
 public class SelectRow: NSObject {
@@ -73,11 +80,18 @@ public class SelectRow: NSObject {
     var delegateToldID = ""
     
     public func execute() {
+        landmarkListCoordinator.delegate = mockLandmarkListCoordinatorDelegate
+        
         mockLandmarkListView.delegate?.didSelect(row: row.intValue)
+        
         guard let id = mockLandmarkListCoordinatorDelegate.landmarkID else { return }
         delegateToldID = id
     }
 }
+
+
+
+/* Mocks. */
 
 class MockLandmarkListView: LandmarkListView {
     var viewData = LandmarkListViewData()
