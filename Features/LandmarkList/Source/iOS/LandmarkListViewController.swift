@@ -41,8 +41,8 @@ extension LandmarkListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LandmarkCell")!
-        let landmark = viewData.rows[indexPath.row]
-        cell.textLabel?.text = landmark.name
+        let row = viewData.rows[indexPath.row]
+        cell.textLabel?.text = row.text
         return cell
     }
 }

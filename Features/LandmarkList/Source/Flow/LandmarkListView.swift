@@ -9,7 +9,7 @@ public struct LandmarkListViewData {
     
     struct Row {
         let id: LandmarkID
-        let name: String
+        let text: String
     }
     
     var errorMessage: String?

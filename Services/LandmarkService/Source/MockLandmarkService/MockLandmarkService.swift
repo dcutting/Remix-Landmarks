@@ -2,9 +2,11 @@ import LandmarkEntity
 
 public class MockLandmarkService: LandmarkService {
     
-    public var landmarks: [Landmark] = []
+    let landmarks: [Landmark]
     
-    public init() {}
+    public init(landmarks: [Landmark]) {
+        self.landmarks = landmarks
+    }
     
     public func fetchAllLandmarks(completion: (LandmarkServiceResult) -> Void) {
         completion(.success(landmarks))

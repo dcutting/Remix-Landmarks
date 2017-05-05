@@ -5,7 +5,7 @@ class LandmarkListPresenter {
         switch result {
         case let .success(landmarks):
             let mapped = landmarks.map {
-                LandmarkListViewData.Row(id: $0.id, name: $0.name)
+                LandmarkListViewData.Row(id: $0.id, text: $0.name)
             }
             return LandmarkListViewData(errorMessage: nil, rows: mapped)
         case let .failure(error):
