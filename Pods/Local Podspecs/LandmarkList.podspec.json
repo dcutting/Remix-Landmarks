@@ -7,16 +7,17 @@
     "type": "MIT"
   },
   "authors": "Dan Cutting",
-  "platforms": {
-    "ios": "10.3"
-  },
   "source": {
     "path": "."
+  },
+  "platforms": {
+    "ios": "10.3",
+    "osx": "10.12"
   },
   "subspecs": [
     {
       "name": "Logic",
-      "source_files": "Source/Logic",
+      "source_files": "Logic",
       "dependencies": {
         "LandmarkService/API": [
 
@@ -24,8 +25,8 @@
       }
     },
     {
-      "name": "Flow",
-      "source_files": "Source/Flow",
+      "name": "View",
+      "source_files": "View",
       "dependencies": {
         "LandmarkList/Logic": [
 
@@ -33,10 +34,13 @@
       }
     },
     {
-      "name": "iOS",
-      "source_files": "Source/iOS",
+      "name": "iOS-View",
+      "platforms": {
+        "ios": "10.3"
+      },
+      "source_files": "iOS-View",
       "dependencies": {
-        "LandmarkList/Flow": [
+        "LandmarkList/View": [
 
         ],
         "LoadablePodResource": [
@@ -50,13 +54,34 @@
       }
     },
     {
-      "name": "Fixtures",
+      "name": "iOS-Flow",
       "platforms": {
         "ios": "10.3"
       },
-      "source_files": "Fixtures",
+      "source_files": "iOS-Flow",
       "dependencies": {
-        "LandmarkList/Flow": [
+        "LandmarkList/iOS-View": [
+
+        ]
+      }
+    },
+    {
+      "name": "Tests",
+      "source_files": "Tests",
+      "dependencies": {
+        "LandmarkList/View": [
+
+        ]
+      }
+    },
+    {
+      "name": "iOS-Fixtures",
+      "platforms": {
+        "ios": "10.3"
+      },
+      "source_files": "iOS-Fixtures",
+      "dependencies": {
+        "LandmarkList/iOS-Flow": [
 
         ]
       }

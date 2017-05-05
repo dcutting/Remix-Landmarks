@@ -9,12 +9,12 @@ First set up some landmark data.
 |99|London|51.5    |0.1      |
 |42|Paris |48.8    |2.3      |
 
-Show the list when the component starts.
+The component shows the list when it starts.
 
 |script|show landmark list |
 |ensure|shows list on start|
 
-Display the landmarks in a list in the order provided by the service.
+The list shows the landmarks in the order provided by the service.
 
 |Ordered query: landmark list rows|
 |row text                         |

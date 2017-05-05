@@ -11,7 +11,7 @@ end
 target :AcceptanceTests do
   platform :ios, '10.3'
   pod 'OCSlimProject'
-  pod 'LandmarkList/Fixtures', :path => 'Features/LandmarkList'
+  pod 'LandmarkList/iOS-Fixtures', :path => 'Features/LandmarkList'
 end
 
 target :LogicTests do

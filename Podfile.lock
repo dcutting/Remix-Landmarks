@@ -8,19 +8,25 @@ PODS:
     - LoadablePodResource
   - LandmarkEntity (0.0.1)
   - LandmarkList (0.0.1):
-    - LandmarkList/Fixtures (= 0.0.1)
-    - LandmarkList/Flow (= 0.0.1)
-    - LandmarkList/iOS (= 0.0.1)
+    - LandmarkList/iOS-Fixtures (= 0.0.1)
+    - LandmarkList/iOS-Flow (= 0.0.1)
+    - LandmarkList/iOS-View (= 0.0.1)
     - LandmarkList/Logic (= 0.0.1)
-  - LandmarkList/Fixtures (0.0.1):
-    - LandmarkList/Flow
-  - LandmarkList/Flow (0.0.1):
-    - LandmarkList/Logic
-  - LandmarkList/iOS (0.0.1):
-    - LandmarkList/Flow
+    - LandmarkList/Tests (= 0.0.1)
+    - LandmarkList/View (= 0.0.1)
+  - LandmarkList/iOS-Fixtures (0.0.1):
+    - LandmarkList/iOS-Flow
+  - LandmarkList/iOS-Flow (0.0.1):
+    - LandmarkList/iOS-View
+  - LandmarkList/iOS-View (0.0.1):
+    - LandmarkList/View
     - LoadablePodResource
   - LandmarkList/Logic (0.0.1):
     - LandmarkService/API
+  - LandmarkList/Tests (0.0.1):
+    - LandmarkList/View
+  - LandmarkList/View (0.0.1):
+    - LandmarkList/Logic
   - LandmarkService (0.0.1):
     - LandmarkEntity
     - LandmarkService/API (= 0.0.1)
@@ -43,7 +49,7 @@ DEPENDENCIES:
   - LandmarkDetail (from `Features/LandmarkDetail`)
   - LandmarkEntity (from `Entities/LandmarkEntity`)
   - LandmarkList (from `Features/LandmarkList`)
-  - LandmarkList/Fixtures (from `Features/LandmarkList`)
+  - LandmarkList/iOS-Fixtures (from `Features/LandmarkList`)
   - LandmarkService (from `Services/LandmarkService`)
   - LandmarkService/Tests (from `Services/LandmarkService`)
   - LoadablePodResource (from `Utilities/LoadablePodResource`)
@@ -68,11 +74,11 @@ SPEC CHECKSUMS:
   LandmarkBrowser: b66f3ea688f9f9b57a5b33f83fdf314da935d1c9
   LandmarkDetail: 930d1df685ee147a8115bb19227fe242f8014362
   LandmarkEntity: 418d0795497fee22395e5f7743651ef6ddefa6d6
-  LandmarkList: fa838d0e42650b71daa0ac04ba78c99efba28d44
+  LandmarkList: 7fdd8e804673bae9ab87cdd26959f5b5fab5abaf
   LandmarkService: caae83d30e9d766f6b095e352c62ba7df53c9842
   LoadablePodResource: '04397809c6abbe73331b56d682c939cd385e371a'
   OCSlimProject: a24337484ec168d7983ef507f75624bb8de21c15
 
-PODFILE CHECKSUM: 414f552c57866b1a0fae14501a873fdec0c7459a
+PODFILE CHECKSUM: 4fab7022b47f14e6e91a097017cdf15f38c9a7c9
 
 COCOAPODS: 1.2.1
