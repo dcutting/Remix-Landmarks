@@ -1,6 +1,0 @@
-framework module LoadablePodResource {
-  umbrella header "LoadablePodResource-umbrella.h"
-
-  export *
-  module * { export * }
-}

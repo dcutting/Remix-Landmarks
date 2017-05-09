@@ -1,6 +1,0 @@
-framework module LandmarkService {
-  umbrella header "LandmarkService-API-Mock-Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

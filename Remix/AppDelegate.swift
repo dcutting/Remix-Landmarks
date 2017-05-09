@@ -1,30 +1,17 @@
-import LandmarkEntity
-import LandmarkService
-import LandmarkList
-
 import UIKit
 
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var appCoordinator: AppCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        guard let window = window else { return false }
-        
-        appCoordinator = makeAppCoordinator(window: window)
-        appCoordinator?.start()
-
-        window.makeKeyAndVisible()
+        let navigationController = window?.rootViewController as? UINavigationController
+        if let landmarkListViewController = navigationController?.topViewController as? LandmarkListViewController {
+            landmarkListViewController.landmarkService = makeLandmarkService()
+        }
         
         return true
-    }
-    
-    func makeAppCoordinator(window: UIWindow) -> AppCoordinator {
-        let landmarkService = makeLandmarkService()
-        return AppCoordinator(window: window, landmarkService: landmarkService)
     }
     
     func makeLandmarkService() -> LandmarkService {
