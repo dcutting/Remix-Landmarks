@@ -73,9 +73,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLn-Tg-zLq">
-                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KVc-8I-TQ7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="487"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude, Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKY-Bj-Rfz">
+                                <rect key="frame" x="16" y="627" width="343" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="gHL-ZS-wri"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Landmark" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLn-Tg-zLq">
+                                <rect key="frame" x="16" y="559" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="zeh-rr-VOf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -83,8 +98,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NLn-Tg-zLq" firstAttribute="trailing" secondItem="hWt-CA-ID9" secondAttribute="trailingMargin" id="1WG-v1-tPM"/>
-                            <constraint firstItem="NLn-Tg-zLq" firstAttribute="centerY" secondItem="hWt-CA-ID9" secondAttribute="centerY" id="E3t-Wl-jIJ"/>
+                            <constraint firstItem="KVc-8I-TQ7" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leading" id="7Fd-rA-ejn"/>
+                            <constraint firstItem="rKY-Bj-Rfz" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leadingMargin" id="87r-Yj-l99"/>
+                            <constraint firstItem="NLn-Tg-zLq" firstAttribute="top" secondItem="KVc-8I-TQ7" secondAttribute="bottom" constant="8" id="K5a-B8-F5l"/>
+                            <constraint firstItem="rKY-Bj-Rfz" firstAttribute="trailing" secondItem="hWt-CA-ID9" secondAttribute="trailingMargin" id="KpP-FV-5V4"/>
                             <constraint firstItem="NLn-Tg-zLq" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leadingMargin" id="RPU-uP-gOV"/>
+                            <constraint firstAttribute="trailing" secondItem="KVc-8I-TQ7" secondAttribute="trailing" id="goP-4h-IUE"/>
+                            <constraint firstItem="rKY-Bj-Rfz" firstAttribute="top" secondItem="NLn-Tg-zLq" secondAttribute="bottom" constant="8" id="jLj-9g-snT"/>
+                            <constraint firstItem="Dif-H3-94i" firstAttribute="top" secondItem="rKY-Bj-Rfz" secondAttribute="bottom" constant="20" id="l2T-U0-zjo"/>
+                            <constraint firstItem="KVc-8I-TQ7" firstAttribute="top" secondItem="zAf-Ds-wus" secondAttribute="bottom" id="rRX-MR-dJD"/>
                         </constraints>
                     </view>
                     <connections>
@@ -93,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjh-OR-KCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1998" y="146"/>
+            <point key="canvasLocation" x="1997.5999999999999" y="145.27736131934034"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fj5-Q0-rFg">
