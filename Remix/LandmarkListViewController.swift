@@ -46,7 +46,7 @@ extension LandmarkListViewController {
         if segue.identifier == "showLandmarkDetail" {
             guard let landmarkDetailViewController = segue.destination as? LandmarkDetailViewController else { return }
             guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
-            landmarkDetailViewController.landmarkID = landmarks[selectedRow].id
+            landmarkDetailViewController.landmark = landmarks[selectedRow]
         }
     }
 }

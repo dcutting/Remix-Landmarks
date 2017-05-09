@@ -110,6 +110,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="coordinatesLabel" destination="rKY-Bj-Rfz" id="bb5-AZ-Ubi"/>
+                        <outlet property="mapView" destination="KVc-8I-TQ7" id="aQi-7t-zXh"/>
                         <outlet property="nameLabel" destination="NLn-Tg-zLq" id="S2R-mN-Dbu"/>
                     </connections>
                 </viewController>
