@@ -92,6 +92,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C8131EF81EC233D9009E6435 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C8131ED81EC22376009E6435 /* Main.storyboard */,
+				C8748D3E1EB8E2E70003E683 /* LaunchScreen.storyboard */,
+				C8748D3C1EB8E2E60003E683 /* Assets.xcassets */,
+				C8748D411EB8E2E70003E683 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		C8748D291EB8E2E60003E683 = {
 			isa = PBXGroup;
 			children = (
@@ -116,16 +127,13 @@
 		C8748D341EB8E2E60003E683 /* Remix */ = {
 			isa = PBXGroup;
 			children = (
-				C8131ED81EC22376009E6435 /* Main.storyboard */,
 				C8131ED01EC22376009E6435 /* AppDelegate.swift */,
 				C8131ED21EC22376009E6435 /* Landmark.swift */,
 				C8131EDD1EC22376009E6435 /* LandmarkListViewController.swift */,
 				C8131ED61EC22376009E6435 /* LandmarkDetailViewController.swift */,
 				C8131EE11EC22376009E6435 /* LandmarkService.swift */,
 				C8131EE21EC22376009E6435 /* MockLandmarkService.swift */,
-				C8748D3C1EB8E2E60003E683 /* Assets.xcassets */,
-				C8748D3E1EB8E2E70003E683 /* LaunchScreen.storyboard */,
-				C8748D411EB8E2E70003E683 /* Info.plist */,
+				C8131EF81EC233D9009E6435 /* Resources */,
 			);
 			path = Remix;
 			sourceTree = "<group>";

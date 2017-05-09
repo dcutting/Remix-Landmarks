@@ -7,11 +7,7 @@ class LandmarkDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var coordinatesLabel: UILabel!
 
-    var landmark: Landmark? {
-        didSet {
-            update()
-        }
-    }
+    var landmark: Landmark?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +15,6 @@ class LandmarkDetailViewController: UIViewController {
     }
     
     func update() {
-        guard isViewLoaded else { return }
         nameLabel?.text = landmark?.name
         coordinatesLabel?.text = formattedText(for: landmark?.coordinate)
         mapView?.centerCoordinate = clCoordinate(for: landmark?.coordinate)
