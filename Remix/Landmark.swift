@@ -14,10 +14,12 @@ public struct Landmark {
     public let id: LandmarkID
     public let name: String
     public let coordinate: LandmarkCoordinate
+    public let funFact: String
     
-    public init(id: LandmarkID, name: String, coordinate: LandmarkCoordinate) {
+    public init(id: LandmarkID, name: String, coordinate: LandmarkCoordinate, funFact: String) {
         self.id = id
         self.name = name
         self.coordinate = coordinate
+        self.funFact = funFact
     }
 }

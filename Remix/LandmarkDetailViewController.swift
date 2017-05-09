@@ -33,4 +33,14 @@ class LandmarkDetailViewController: UIViewController {
         guard let coordinate = coordinate else { return CLLocationCoordinate2D() }
         return CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
     }
+    
+    @IBAction func didTapInfoButton(_ sender: Any) {
+        guard let landmark = landmark else { return }
+        let alert = UIAlertController(title: landmark.funFact, message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Really?!", style: .default) { action in
+            alert.dismiss(animated: true)
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }

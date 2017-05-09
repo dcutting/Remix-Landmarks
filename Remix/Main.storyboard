@@ -94,12 +94,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovY-Jv-yBe">
+                                <rect key="frame" x="16" y="529" width="22" height="22"/>
+                                <connections>
+                                    <action selector="didTapInfoButton:" destination="IH9-9X-l7J" eventType="touchUpInside" id="hkA-lV-qqS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NLn-Tg-zLq" firstAttribute="trailing" secondItem="hWt-CA-ID9" secondAttribute="trailingMargin" id="1WG-v1-tPM"/>
                             <constraint firstItem="KVc-8I-TQ7" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leading" id="7Fd-rA-ejn"/>
                             <constraint firstItem="rKY-Bj-Rfz" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leadingMargin" id="87r-Yj-l99"/>
+                            <constraint firstItem="ovY-Jv-yBe" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leadingMargin" id="8WF-8V-LLI"/>
+                            <constraint firstItem="NLn-Tg-zLq" firstAttribute="top" secondItem="ovY-Jv-yBe" secondAttribute="bottom" constant="8" id="IdG-fQ-bXp"/>
                             <constraint firstItem="rKY-Bj-Rfz" firstAttribute="trailing" secondItem="hWt-CA-ID9" secondAttribute="trailingMargin" id="KpP-FV-5V4"/>
                             <constraint firstItem="NLn-Tg-zLq" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leadingMargin" id="RPU-uP-gOV"/>
                             <constraint firstAttribute="trailing" secondItem="KVc-8I-TQ7" secondAttribute="trailing" id="goP-4h-IUE"/>
