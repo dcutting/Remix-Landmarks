@@ -40,13 +40,12 @@ public class PopulateLandmarkService: NSObject {
 
 public class ShowLandmarkList: NSObject {
     
-    public func showsListOnStart() -> NSNumber {
+    public func showsListOnStart() -> Bool {
 
         landmarkListCoordinator.start()
         
         guard let actual = mockLandmarkListWireframe.actualShowLandmarkListView else { return false }
-        let ok = actual === mockLandmarkListView
-        return NSNumber(booleanLiteral: ok)
+        return actual === mockLandmarkListView
     }
 }
 
