@@ -27,7 +27,11 @@ class LandmarkDetailViewController: UIViewController {
     
     func text(for coordinate: LandmarkCoordinate?) -> String {
         guard let coordinate = coordinate else { return "" }
-        return "\(coordinate.latitude), \(coordinate.longitude)"
+        let latitude = coordinate.latitude >= 0.0 ? coordinate.latitude : -coordinate.latitude
+        let longitude = coordinate.longitude >= 0.0 ? coordinate.longitude : -coordinate.longitude
+        let latitudeDirection = coordinate.latitude >= 0.0 ? "N" : "S"
+        let longitudeDirection = coordinate.longitude >= 0.0 ? "E" : "W"    // TODO: correct?
+        return "\(latitude)\(latitudeDirection) \(longitude)\(longitudeDirection)"
     }
     
     func clCoordinate(for coordinate: LandmarkCoordinate?) -> CLLocationCoordinate2D {

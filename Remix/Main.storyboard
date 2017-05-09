@@ -74,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KVc-8I-TQ7">
-                                <rect key="frame" x="0.0" y="64" width="375" height="487"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude, Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKY-Bj-Rfz">
                                 <rect key="frame" x="16" y="627" width="343" height="20"/>
@@ -85,7 +85,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Landmark" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLn-Tg-zLq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Landmark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLn-Tg-zLq">
                                 <rect key="frame" x="16" y="559" width="343" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="zeh-rr-VOf"/>
@@ -100,10 +100,10 @@
                             <constraint firstItem="NLn-Tg-zLq" firstAttribute="trailing" secondItem="hWt-CA-ID9" secondAttribute="trailingMargin" id="1WG-v1-tPM"/>
                             <constraint firstItem="KVc-8I-TQ7" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leading" id="7Fd-rA-ejn"/>
                             <constraint firstItem="rKY-Bj-Rfz" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leadingMargin" id="87r-Yj-l99"/>
-                            <constraint firstItem="NLn-Tg-zLq" firstAttribute="top" secondItem="KVc-8I-TQ7" secondAttribute="bottom" constant="8" id="K5a-B8-F5l"/>
                             <constraint firstItem="rKY-Bj-Rfz" firstAttribute="trailing" secondItem="hWt-CA-ID9" secondAttribute="trailingMargin" id="KpP-FV-5V4"/>
                             <constraint firstItem="NLn-Tg-zLq" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leadingMargin" id="RPU-uP-gOV"/>
                             <constraint firstAttribute="trailing" secondItem="KVc-8I-TQ7" secondAttribute="trailing" id="goP-4h-IUE"/>
+                            <constraint firstItem="Dif-H3-94i" firstAttribute="top" secondItem="KVc-8I-TQ7" secondAttribute="bottom" id="j17-k9-2MU"/>
                             <constraint firstItem="rKY-Bj-Rfz" firstAttribute="top" secondItem="NLn-Tg-zLq" secondAttribute="bottom" constant="8" id="jLj-9g-snT"/>
                             <constraint firstItem="Dif-H3-94i" firstAttribute="top" secondItem="rKY-Bj-Rfz" secondAttribute="bottom" constant="20" id="l2T-U0-zjo"/>
                             <constraint firstItem="KVc-8I-TQ7" firstAttribute="top" secondItem="zAf-Ds-wus" secondAttribute="bottom" id="rRX-MR-dJD"/>
