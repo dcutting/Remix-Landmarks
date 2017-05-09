@@ -5,49 +5,50 @@ class LandmarkListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var landmarkService: LandmarkService?
-    var landmarks: [Landmark] = []
-    var errorMessage: String?
+    
+    fileprivate var landmarks: [Landmark] = []
+    fileprivate var errorMessage: String?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         title = "Landmarks"
-        update()
         fetchLandmarks()
     }
-    
-    func update() {
-        present(message: errorMessage)
-        tableView.reloadData()
-    }
-    
-    func present(message: String?) {
-        guard let message = message else { return }
-        let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
-        present(alert, animated: true)
-    }
-    
-    func fetchLandmarks() {
-        landmarkService?.fetchAllLandmarks { result in
-            switch result {
-            case let .success(landmarks):
-                self.landmarks = landmarks
-                self.errorMessage = nil
-            case let .failure(error):
-                self.errorMessage = error.localizedDescription
-            }
-            update()
-        }
-    }
-}
 
-extension LandmarkListViewController {
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showLandmarkDetail" {
             guard let landmarkDetailViewController = segue.destination as? LandmarkDetailViewController else { return }
             guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
             landmarkDetailViewController.landmark = landmarks[selectedRow]
         }
+    }
+}
+
+extension LandmarkListViewController {
+    
+    fileprivate func fetchLandmarks() {
+        landmarkService?.fetchAllLandmarks { result in
+            switch result {
+            case let .success(landmarks):
+                self.landmarks = landmarks
+                self.errorMessage = nil
+            case let .failure(error):
+                self.landmarks = []
+                self.errorMessage = error.localizedDescription
+            }
+            update()
+        }
+    }
+
+    private func update() {
+        present(message: errorMessage)
+        tableView.reloadData()
+    }
+    
+    private func present(message: String?) {
+        guard let message = message else { return }
+        let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        present(alert, animated: true)
     }
 }
 

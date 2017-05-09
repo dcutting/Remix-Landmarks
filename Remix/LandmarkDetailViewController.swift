@@ -21,11 +21,11 @@ class LandmarkDetailViewController: UIViewController {
     func update() {
         guard isViewLoaded else { return }
         nameLabel?.text = landmark?.name
-        coordinatesLabel?.text = text(for: landmark?.coordinate)
+        coordinatesLabel?.text = formattedText(for: landmark?.coordinate)
         mapView?.centerCoordinate = clCoordinate(for: landmark?.coordinate)
     }
     
-    func text(for coordinate: LandmarkCoordinate?) -> String {
+    func formattedText(for coordinate: LandmarkCoordinate?) -> String {
         guard let coordinate = coordinate else { return "" }
         let latitude = coordinate.latitude >= 0.0 ? coordinate.latitude : -coordinate.latitude
         let longitude = coordinate.longitude >= 0.0 ? coordinate.longitude : -coordinate.longitude
