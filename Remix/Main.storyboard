@@ -81,7 +81,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="gHL-ZS-wri"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -90,7 +90,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="zeh-rr-VOf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
