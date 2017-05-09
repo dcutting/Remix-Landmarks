@@ -1,5 +1,5 @@
 PODS:
-  - cslim (1.1.4)
+  - cslim (1.1.5)
   - LandmarkBrowser (0.0.1):
     - LandmarkDetail
     - LandmarkList
@@ -70,7 +70,7 @@ EXTERNAL SOURCES:
     :path: Utilities/LoadablePodResource
 
 SPEC CHECKSUMS:
-  cslim: 43442b320273abf3542b5928c97425373ba7ee0a
+  cslim: 75bc8dc738cdc5b7d51303f94544dad486bd9d3c
   LandmarkBrowser: b66f3ea688f9f9b57a5b33f83fdf314da935d1c9
   LandmarkDetail: 930d1df685ee147a8115bb19227fe242f8014362
   LandmarkEntity: 418d0795497fee22395e5f7743651ef6ddefa6d6
