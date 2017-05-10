@@ -1,13 +1,25 @@
 import UIKit
 import MapKit
 
+struct LandmarkDetailViewData {
+    
+    var title: String = ""
+    var coordinates: String = ""
+    var funFact: String = ""
+    var region: MKCoordinateRegion = MKCoordinateRegion()
+}
+
 class LandmarkDetailViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var coordinatesLabel: UILabel!
 
-    var landmark: Landmark?
+    var viewData = LandmarkDetailViewData() {
+        didSet {
+            update()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,32 +27,14 @@ class LandmarkDetailViewController: UIViewController {
     }
     
     func update() {
-        nameLabel?.text = landmark?.name
-        coordinatesLabel?.text = formattedText(for: landmark?.coordinate)
-        let clCoordinate = makeCLCoordinate(for: landmark?.coordinate)
-        let span = MKCoordinateSpanMake(1, 1)
-        var region = MKCoordinateRegionMake(clCoordinate, span)
-        region.center = clCoordinate
-        mapView?.setRegion(region, animated: false)
-    }
-    
-    func formattedText(for coordinate: LandmarkCoordinate?) -> String {
-        guard let coordinate = coordinate else { return "" }
-        let latitude = coordinate.latitude >= 0.0 ? coordinate.latitude : -coordinate.latitude
-        let longitude = coordinate.longitude >= 0.0 ? coordinate.longitude : -coordinate.longitude
-        let latitudeDirection = coordinate.latitude >= 0.0 ? "N" : "S"
-        let longitudeDirection = coordinate.longitude >= 0.0 ? "E" : "W"    // TODO: correct?
-        return "\(latitude)\(latitudeDirection) \(longitude)\(longitudeDirection)"
-    }
-    
-    func makeCLCoordinate(for coordinate: LandmarkCoordinate?) -> CLLocationCoordinate2D {
-        guard let coordinate = coordinate else { return CLLocationCoordinate2D() }
-        return CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        guard isViewLoaded else { return }
+        nameLabel?.text = viewData.title
+        coordinatesLabel?.text = viewData.coordinates
+        mapView?.setRegion(viewData.region, animated: false)
     }
     
     @IBAction func didTapInfoButton(_ sender: Any) {
-        guard let landmark = landmark else { return }
-        let alert = UIAlertController(title: landmark.funFact, message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: viewData.funFact, message: nil, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Really?!", style: .default) { action in
             alert.dismiss(animated: true)
         }
