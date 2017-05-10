@@ -6,7 +6,7 @@ struct LandmarkDetailViewData {
     var title: String = ""
     var coordinates: String = ""
     var funFact: String = ""
-    var region: MKCoordinateRegion = MKCoordinateRegion()
+    var mapRegion: MKCoordinateRegion = MKCoordinateRegion()
 }
 
 class LandmarkDetailViewController: UIViewController {
@@ -30,7 +30,7 @@ class LandmarkDetailViewController: UIViewController {
         guard isViewLoaded else { return }
         nameLabel?.text = viewData.title
         coordinatesLabel?.text = viewData.coordinates
-        mapView?.setRegion(viewData.region, animated: false)
+        mapView?.setRegion(viewData.mapRegion, animated: false)
     }
     
     @IBAction func didTapInfoButton(_ sender: Any) {
