@@ -6,7 +6,7 @@ struct LandmarkDetailViewData {
     var title: String = ""
     var coordinates: String = ""
     var funFact: String = ""
-    var region: MKCoordinateRegion = MKCoordinateRegion()
+    var mapRegion: MKCoordinateRegion = MKCoordinateRegion()
 }
 
 class LandmarkDetailViewController: UIViewController {
