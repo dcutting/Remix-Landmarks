@@ -16,9 +16,10 @@ import UIKit
     
     func makeLandmarkService() -> LandmarkService {
         let london = Landmark(id: LandmarkID("london"), name: "London", coordinate: LandmarkCoordinate(latitude: 51.51, longitude: 0.13), funFact: "Largest population of meerkats outside Manchester")
+        let krakow = Landmark(id: LandmarkID("krakow"), name: "Kraków", coordinate: LandmarkCoordinate(latitude: 50.06, longitude: 19.94), funFact: "Fantastic selection of dumplings")
         let paris = Landmark(id: LandmarkID("paris"), name: "Paris", coordinate: LandmarkCoordinate(latitude: 48.86, longitude: 2.35), funFact: "Perhaps the only city more beautiful than Slough")
-        let quito = Landmark(id: LandmarkID("quito"), name: "Quito", coordinate: LandmarkCoordinate(latitude: -0.18, longitude: -78.47), funFact: "Often mistaken for a hat")    // TODO
-        let landmarks = [london, paris, quito]
+        let quito = Landmark(id: LandmarkID("quito"), name: "Quito", coordinate: LandmarkCoordinate(latitude: -0.18, longitude: -78.47), funFact: "Often mistaken for a hat")
+        let landmarks = [london, krakow, paris, quito]
         let landmarkService = MockLandmarkService(landmarks: landmarks)
         return landmarkService
     }
