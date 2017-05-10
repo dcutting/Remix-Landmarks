@@ -5,4 +5,5 @@ public enum LandmarkServiceResult {
 
 public protocol LandmarkService {
     func fetchAllLandmarks(completion: (LandmarkServiceResult) -> Void)
+    func fetchLandmark(with id: LandmarkID, completion: (LandmarkServiceResult) -> Void)
 }

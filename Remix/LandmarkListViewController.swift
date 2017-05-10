@@ -1,47 +1,43 @@
 import UIKit
 
+protocol LandmarkListViewDelegate: class {
+    func didSelect(row: Int)
+}
+
+struct LandmarkListViewData {
+    
+    struct Row {
+        let id: LandmarkID
+        let text: String
+    }
+    
+    var errorMessage: String?
+    var rows: [Row] = []
+}
+
 class LandmarkListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var landmarkService: LandmarkService?
+    weak var delegate: LandmarkListViewDelegate?
     
-    fileprivate var landmarks: [Landmark] = []
-    fileprivate var errorMessage: String?
+    var viewData = LandmarkListViewData() {
+        didSet {
+            update()
+        }
+    }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         title = "Landmarks"
-        fetchLandmarks()
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showLandmarkDetail" {
-            guard let landmarkDetailViewController = segue.destination as? LandmarkDetailViewController else { return }
-            guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
-            landmarkDetailViewController.landmark = landmarks[selectedRow]
-        }
     }
 }
 
 extension LandmarkListViewController {
     
-    fileprivate func fetchLandmarks() {
-        landmarkService?.fetchAllLandmarks { result in
-            switch result {
-            case let .success(landmarks):
-                self.landmarks = landmarks
-                self.errorMessage = nil
-            case let .failure(error):
-                self.landmarks = []
-                self.errorMessage = error.localizedDescription
-            }
-            update()
-        }
-    }
-
-    private func update() {
-        present(message: errorMessage)
+    fileprivate func update() {
+        guard isViewLoaded else { return }
+        present(message: viewData.errorMessage)
         tableView.reloadData()
     }
     
@@ -55,24 +51,20 @@ extension LandmarkListViewController {
 extension LandmarkListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return landmarks.count
+        return viewData.rows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LandmarkCell")!
-        let landmark = landmarks[indexPath.row]
-        cell.textLabel?.text = formattedRowText(for: landmark)
+        cell.textLabel?.text = viewData.rows[indexPath.row].text
         return cell
-    }
-    
-    private func formattedRowText(for landmark: Landmark) -> String {
-        return "\(landmark.name.uppercased()) (\(landmark.coordinate.latitude), \(landmark.coordinate.longitude))"
     }
 }
 
 extension LandmarkListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.didSelect(row: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
