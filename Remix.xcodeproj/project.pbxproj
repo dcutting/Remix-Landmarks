@@ -40,7 +40,6 @@
 		C8131EE21EC22376009E6435 /* MockLandmarkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLandmarkService.swift; sourceTree = "<group>"; };
 		C8131EF61EC22C17009E6435 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C8131EF91EC2346B009E6435 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		C86DBFDA1EBA3C5800E5B552 /* LogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748D321EB8E2E60003E683 /* Remix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748D3C1EB8E2E60003E683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8748D3F1EB8E2E70003E683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,18 +47,10 @@
 		C8748D461EB8E2E70003E683 /* RemixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748D4A1EB8E2E70003E683 /* RemixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemixTests.swift; sourceTree = "<group>"; };
 		C8748D4C1EB8E2E70003E683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8901C931EBA8CB200CF7375 /* AcceptanceTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcceptanceTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8901CA11EBAADE600CF7375 /* LandmarkList.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LandmarkList.framework; path = "../../../Library/Developer/Xcode/DerivedData/Remix-hcrrzexnvjrhnndbaermmydkeofk/Build/Products/Debug-iphonesimulator/LandmarkList/LandmarkList.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C86DBFD71EBA3C5800E5B552 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C8748D2F1EB8E2E60003E683 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,13 +60,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C8748D431EB8E2E70003E683 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C8901C8F1EBA8CB200CF7375 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -120,8 +104,6 @@
 			children = (
 				C8748D321EB8E2E60003E683 /* Remix.app */,
 				C8748D461EB8E2E70003E683 /* RemixTests.xctest */,
-				C86DBFDA1EBA3C5800E5B552 /* LogicTests.xctest */,
-				C8901C931EBA8CB200CF7375 /* AcceptanceTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,23 +135,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C86DBFD91EBA3C5800E5B552 /* LogicTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C86DBFE11EBA3C5800E5B552 /* Build configuration list for PBXNativeTarget "LogicTests" */;
-			buildPhases = (
-				C86DBFD61EBA3C5800E5B552 /* Sources */,
-				C86DBFD71EBA3C5800E5B552 /* Frameworks */,
-				C86DBFD81EBA3C5800E5B552 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LogicTests;
-			productName = LogicTests;
-			productReference = C86DBFDA1EBA3C5800E5B552 /* LogicTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		C8748D311EB8E2E60003E683 /* Remix */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8748D4F1EB8E2E70003E683 /* Build configuration list for PBXNativeTarget "Remix" */;
@@ -205,24 +170,6 @@
 			productReference = C8748D461EB8E2E70003E683 /* RemixTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C8901C921EBA8CB200CF7375 /* AcceptanceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C8901CA01EBA8CB200CF7375 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */;
-			buildPhases = (
-				C8901C8E1EBA8CB200CF7375 /* Sources */,
-				C8901C8F1EBA8CB200CF7375 /* Frameworks */,
-				C8901C901EBA8CB200CF7375 /* Resources */,
-				C8901C911EBA8CB200CF7375 /* [OCSP] Generate Fitnesse Test System Scripts */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AcceptanceTests;
-			productName = AcceptanceTests;
-			productReference = C8901C931EBA8CB200CF7375 /* AcceptanceTests.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -233,11 +180,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Dan Cutting";
 				TargetAttributes = {
-					C86DBFD91EBA3C5800E5B552 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = J6LY6992AF;
-						ProvisioningStyle = Automatic;
-					};
 					C8748D311EB8E2E60003E683 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = J6LY6992AF;
@@ -255,11 +197,6 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = C8748D311EB8E2E60003E683;
 					};
-					C8901C921EBA8CB200CF7375 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = J6LY6992AF;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = C8748D2D1EB8E2E60003E683 /* Build configuration list for PBXProject "Remix" */;
@@ -276,21 +213,12 @@
 			projectRoot = "";
 			targets = (
 				C8748D311EB8E2E60003E683 /* Remix */,
-				C8901C921EBA8CB200CF7375 /* AcceptanceTests */,
 				C8748D451EB8E2E70003E683 /* RemixTests */,
-				C86DBFD91EBA3C5800E5B552 /* LogicTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C86DBFD81EBA3C5800E5B552 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C8748D301EB8E2E60003E683 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,40 +235,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8901C901EBA8CB200CF7375 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		C8901C911EBA8CB200CF7375 /* [OCSP] Generate Fitnesse Test System Scripts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[OCSP] Generate Fitnesse Test System Scripts";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${OCSP_SUPPORT_FILE_DIR}/ocsp-generate-fitnesse-test-system-scripts.sh \"${OCSP_BUNDLE_RESOURCES_DIR}\"";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		C86DBFD61EBA3C5800E5B552 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C8748D2E1EB8E2E60003E683 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,13 +257,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8748D4B1EB8E2E70003E683 /* RemixTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C8901C8E1EBA8CB200CF7375 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,38 +282,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C86DBFDF1EBA3C5800E5B552 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = J6LY6992AF;
-				INFOPLIST_FILE = LogicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = io.cutting.LogicTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		C86DBFE01EBA3C5800E5B552 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = J6LY6992AF;
-				INFOPLIST_FILE = LogicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = io.cutting.LogicTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 		C8748D4D1EB8E2E70003E683 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -576,44 +434,9 @@
 			};
 			name = Release;
 		};
-		C8901C9E1EBA8CB200CF7375 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = J6LY6992AF;
-				INFOPLIST_FILE = AcceptanceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.cutting.AcceptanceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AcceptanceTests/AcceptanceTests-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		C8901C9F1EBA8CB200CF7375 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = J6LY6992AF;
-				INFOPLIST_FILE = AcceptanceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.cutting.AcceptanceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AcceptanceTests/AcceptanceTests-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C86DBFE11EBA3C5800E5B552 /* Build configuration list for PBXNativeTarget "LogicTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C86DBFDF1EBA3C5800E5B552 /* Debug */,
-				C86DBFE01EBA3C5800E5B552 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C8748D2D1EB8E2E60003E683 /* Build configuration list for PBXProject "Remix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -637,15 +460,6 @@
 			buildConfigurations = (
 				C8748D531EB8E2E70003E683 /* Debug */,
 				C8748D541EB8E2E70003E683 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C8901CA01EBA8CB200CF7375 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C8901C9E1EBA8CB200CF7375 /* Debug */,
-				C8901C9F1EBA8CB200CF7375 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
