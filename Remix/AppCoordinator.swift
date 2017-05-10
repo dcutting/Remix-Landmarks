@@ -94,7 +94,7 @@ extension AppCoordinator: LandmarkListViewDelegate {
         let latitude = coordinate.latitude >= 0.0 ? coordinate.latitude : -coordinate.latitude
         let longitude = coordinate.longitude >= 0.0 ? coordinate.longitude : -coordinate.longitude
         let latitudeDirection = coordinate.latitude >= 0.0 ? "N" : "S"
-        let longitudeDirection = coordinate.longitude >= 0.0 ? "E" : "W"    // TODO: correct?
+        let longitudeDirection = coordinate.longitude >= 0.0 ? "E" : "W"
         return "\(latitude)\(latitudeDirection) \(longitude)\(longitudeDirection)"
     }
 }
