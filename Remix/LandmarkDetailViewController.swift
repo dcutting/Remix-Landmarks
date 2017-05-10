@@ -17,7 +17,11 @@ class LandmarkDetailViewController: UIViewController {
     func update() {
         nameLabel?.text = landmark?.name
         coordinatesLabel?.text = formattedText(for: landmark?.coordinate)
-        mapView?.centerCoordinate = clCoordinate(for: landmark?.coordinate)
+        let clCoordinate = makeCLCoordinate(for: landmark?.coordinate)
+        let span = MKCoordinateSpanMake(1, 1)
+        var region = MKCoordinateRegionMake(clCoordinate, span)
+        region.center = clCoordinate
+        mapView?.setRegion(region, animated: false)
     }
     
     func formattedText(for coordinate: LandmarkCoordinate?) -> String {
@@ -29,7 +33,7 @@ class LandmarkDetailViewController: UIViewController {
         return "\(latitude)\(latitudeDirection) \(longitude)\(longitudeDirection)"
     }
     
-    func clCoordinate(for coordinate: LandmarkCoordinate?) -> CLLocationCoordinate2D {
+    func makeCLCoordinate(for coordinate: LandmarkCoordinate?) -> CLLocationCoordinate2D {
         guard let coordinate = coordinate else { return CLLocationCoordinate2D() }
         return CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
     }

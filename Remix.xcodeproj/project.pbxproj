@@ -15,6 +15,7 @@
 		C8131EF41EC22376009E6435 /* LandmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8131EE11EC22376009E6435 /* LandmarkService.swift */; };
 		C8131EF51EC22376009E6435 /* MockLandmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8131EE21EC22376009E6435 /* MockLandmarkService.swift */; };
 		C8131EF71EC22C17009E6435 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8131EF61EC22C17009E6435 /* MapKit.framework */; };
+		C8131EFA1EC2346B009E6435 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8131EF91EC2346B009E6435 /* AppCoordinator.swift */; };
 		C8748D401EB8E2E70003E683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8748D3E1EB8E2E70003E683 /* LaunchScreen.storyboard */; };
 		C8748D4B1EB8E2E70003E683 /* RemixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8748D4A1EB8E2E70003E683 /* RemixTests.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		C8131EE11EC22376009E6435 /* LandmarkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkService.swift; sourceTree = "<group>"; };
 		C8131EE21EC22376009E6435 /* MockLandmarkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLandmarkService.swift; sourceTree = "<group>"; };
 		C8131EF61EC22C17009E6435 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C8131EF91EC2346B009E6435 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C86DBFDA1EBA3C5800E5B552 /* LogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748D321EB8E2E60003E683 /* Remix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8748D3C1EB8E2E60003E683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				C8131ED01EC22376009E6435 /* AppDelegate.swift */,
+				C8131EF91EC2346B009E6435 /* AppCoordinator.swift */,
 				C8131ED21EC22376009E6435 /* Landmark.swift */,
 				C8131EDD1EC22376009E6435 /* LandmarkListViewController.swift */,
 				C8131ED61EC22376009E6435 /* LandmarkDetailViewController.swift */,
@@ -348,6 +351,7 @@
 				C8131EF51EC22376009E6435 /* MockLandmarkService.swift in Sources */,
 				C8131EF01EC22376009E6435 /* LandmarkListViewController.swift in Sources */,
 				C8131EE51EC22376009E6435 /* Landmark.swift in Sources */,
+				C8131EFA1EC2346B009E6435 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
