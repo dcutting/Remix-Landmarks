@@ -1,5 +1,4 @@
 import UIKit
-import MapKit
 
 class AppCoordinator {
     
@@ -61,7 +60,7 @@ extension AppCoordinator: LandmarkListViewDelegate {
         let viewController = makeLandmarkDetailViewController()
         landmarkService.fetchLandmark(with: landmarkID) { result in
             if case let .success(landmarks) = result, let landmark = landmarks.first {
-                let viewData = makeLandmarkDetailViewData(for: landmark)
+                let viewData = LandmarkDetailPresenter().makeLandmarkDetailViewData(for: landmark)
                 viewController.viewData = viewData
             }
         }
@@ -72,29 +71,5 @@ extension AppCoordinator: LandmarkListViewDelegate {
     func makeLandmarkDetailViewController() -> LandmarkDetailViewController {
         guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LandmarkDetailViewController") as? LandmarkDetailViewController else { preconditionFailure() }
         return viewController
-    }
-    
-    func makeLandmarkDetailViewData(for landmark: Landmark) -> LandmarkDetailViewData {
-        let clCoordinate = makeCLCoordinate(for: landmark.coordinate)
-        let span = MKCoordinateSpanMake(1, 1)
-        var region = MKCoordinateRegionMake(clCoordinate, span)
-        region.center = clCoordinate
-        
-        let formattedCoordinate = formattedText(for: landmark.coordinate)
-        return LandmarkDetailViewData(title: landmark.name, coordinates: formattedCoordinate, funFact: landmark.funFact, region: region)
-    }
-    
-    func makeCLCoordinate(for coordinate: LandmarkCoordinate?) -> CLLocationCoordinate2D {
-        guard let coordinate = coordinate else { return CLLocationCoordinate2D() }
-        return CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-    }
-    
-    func formattedText(for coordinate: LandmarkCoordinate?) -> String {
-        guard let coordinate = coordinate else { return "" }
-        let latitude = coordinate.latitude >= 0.0 ? coordinate.latitude : -coordinate.latitude
-        let longitude = coordinate.longitude >= 0.0 ? coordinate.longitude : -coordinate.longitude
-        let latitudeDirection = coordinate.latitude >= 0.0 ? "N" : "S"
-        let longitudeDirection = coordinate.longitude >= 0.0 ? "E" : "W"    // TODO: correct?
-        return "\(latitude)\(latitudeDirection) \(longitude)\(longitudeDirection)"
     }
 }

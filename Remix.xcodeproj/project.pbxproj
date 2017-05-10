@@ -18,6 +18,7 @@
 		C8131EFA1EC2346B009E6435 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8131EF91EC2346B009E6435 /* AppCoordinator.swift */; };
 		C8748D401EB8E2E70003E683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8748D3E1EB8E2E70003E683 /* LaunchScreen.storyboard */; };
 		C8748D4B1EB8E2E70003E683 /* RemixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8748D4A1EB8E2E70003E683 /* RemixTests.swift */; };
+		C89589E81EC373E100B541A2 /* LandmarkDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89589E71EC373E100B541A2 /* LandmarkDetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		C8748D4A1EB8E2E70003E683 /* RemixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemixTests.swift; sourceTree = "<group>"; };
 		C8748D4C1EB8E2E70003E683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8901CA11EBAADE600CF7375 /* LandmarkList.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LandmarkList.framework; path = "../../../Library/Developer/Xcode/DerivedData/Remix-hcrrzexnvjrhnndbaermmydkeofk/Build/Products/Debug-iphonesimulator/LandmarkList/LandmarkList.framework"; sourceTree = "<group>"; };
+		C89589E71EC373E100B541A2 /* LandmarkDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkDetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				C8131ED21EC22376009E6435 /* Landmark.swift */,
 				C8131EDD1EC22376009E6435 /* LandmarkListViewController.swift */,
 				C8131ED61EC22376009E6435 /* LandmarkDetailViewController.swift */,
+				C89589E71EC373E100B541A2 /* LandmarkDetailPresenter.swift */,
 				C8131EE11EC22376009E6435 /* LandmarkService.swift */,
 				C8131EE21EC22376009E6435 /* MockLandmarkService.swift */,
 				C8131EF81EC233D9009E6435 /* Resources */,
@@ -247,6 +250,7 @@
 				C8131EF41EC22376009E6435 /* LandmarkService.swift in Sources */,
 				C8131EF51EC22376009E6435 /* MockLandmarkService.swift in Sources */,
 				C8131EF01EC22376009E6435 /* LandmarkListViewController.swift in Sources */,
+				C89589E81EC373E100B541A2 /* LandmarkDetailPresenter.swift in Sources */,
 				C8131EE51EC22376009E6435 /* Landmark.swift in Sources */,
 				C8131EFA1EC2346B009E6435 /* AppCoordinator.swift in Sources */,
 			);
