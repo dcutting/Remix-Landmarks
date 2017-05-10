@@ -81,7 +81,7 @@ extension AppCoordinator: LandmarkListViewDelegate {
         region.center = clCoordinate
         
         let formattedCoordinate = formattedText(for: landmark.coordinate)
-        return LandmarkDetailViewData(title: landmark.name, coordinates: formattedCoordinate, funFact: landmark.funFact, region: region)
+        return LandmarkDetailViewData(title: landmark.name, coordinates: formattedCoordinate, funFact: landmark.funFact, mapRegion: region)
     }
     
     func makeCLCoordinate(for coordinate: LandmarkCoordinate?) -> CLLocationCoordinate2D {
