@@ -1,0 +1,28 @@
+<UIView width="100%" height="100%">
+    <MKMapView
+        width="100%"
+        height="100%"
+        outlet="mapView"
+        region="mapRegion"
+    />
+    <UIButton
+        type="infoDark"
+        left="20"
+        bottom="next.top - 8"
+        touchUpInside="didTapInfoButton:"
+    />
+    <UILabel
+        left="20"
+        font="50 bold"
+        bottom="next.top - 8"
+        text="{title}"
+        outlet="nameLabel"
+    />
+    <UILabel
+        left="20"
+        font="18 bold"
+        bottom="100% - 19"
+        text="{coordinates}"
+        outlet="coordinatesLabel"
+    />
+</UIView>

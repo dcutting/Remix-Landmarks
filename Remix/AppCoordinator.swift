@@ -1,7 +1,7 @@
 import UIKit
 
 class AppCoordinator {
-    
+
     let window: UIWindow
     let landmarkService: LandmarkService
 
@@ -10,14 +10,14 @@ class AppCoordinator {
     var landmarkDetailViewController: LandmarkDetailViewController?
 
     var viewData: LandmarkListViewData?
-    
+
     init(window: UIWindow, landmarkService: LandmarkService) {
         self.window = window
         self.landmarkService = landmarkService
 
         self.window.rootViewController = navigationController
     }
-    
+
     func start() {
         let viewController = makeLandmarkListViewController()
         viewController.delegate = self
@@ -26,7 +26,7 @@ class AppCoordinator {
 
         fetchAllLandmarks()
     }
-    
+
     func makeLandmarkListViewController() -> LandmarkListViewController {
         guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LandmarkListViewController") as? LandmarkListViewController else { preconditionFailure() }
         return viewController
@@ -67,9 +67,8 @@ extension AppCoordinator: LandmarkListViewDelegate {
         self.landmarkDetailViewController = viewController
         self.navigationController.pushViewController(viewController, animated: true)
     }
-    
+
     func makeLandmarkDetailViewController() -> LandmarkDetailViewController {
-        guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LandmarkDetailViewController") as? LandmarkDetailViewController else { preconditionFailure() }
-        return viewController
+        return LandmarkDetailViewController()
     }
 }
