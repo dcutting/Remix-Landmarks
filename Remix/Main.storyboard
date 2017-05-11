@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -57,72 +56,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mi-xQ-2pT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028" y="146.17691154422789"/>
-        </scene>
-        <!--Landmark Detail View Controller-->
-        <scene sceneID="XSK-PT-awa">
-            <objects>
-                <viewController storyboardIdentifier="LandmarkDetailViewController" id="IH9-9X-l7J" customClass="LandmarkDetailViewController" customModule="Remix" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zAf-Ds-wus"/>
-                        <viewControllerLayoutGuide type="bottom" id="Dif-H3-94i"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hWt-CA-ID9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KVc-8I-TQ7">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude, Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKY-Bj-Rfz">
-                                <rect key="frame" x="16" y="627" width="343" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="gHL-ZS-wri"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Landmark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLn-Tg-zLq">
-                                <rect key="frame" x="16" y="559" width="343" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="zeh-rr-VOf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovY-Jv-yBe">
-                                <rect key="frame" x="16" y="529" width="22" height="22"/>
-                                <connections>
-                                    <action selector="didTapInfoButton:" destination="IH9-9X-l7J" eventType="touchUpInside" id="hkA-lV-qqS"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="NLn-Tg-zLq" firstAttribute="trailing" secondItem="hWt-CA-ID9" secondAttribute="trailingMargin" id="1WG-v1-tPM"/>
-                            <constraint firstItem="KVc-8I-TQ7" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leading" id="7Fd-rA-ejn"/>
-                            <constraint firstItem="rKY-Bj-Rfz" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leadingMargin" id="87r-Yj-l99"/>
-                            <constraint firstItem="ovY-Jv-yBe" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leadingMargin" id="8WF-8V-LLI"/>
-                            <constraint firstItem="NLn-Tg-zLq" firstAttribute="top" secondItem="ovY-Jv-yBe" secondAttribute="bottom" constant="8" id="IdG-fQ-bXp"/>
-                            <constraint firstItem="rKY-Bj-Rfz" firstAttribute="trailing" secondItem="hWt-CA-ID9" secondAttribute="trailingMargin" id="KpP-FV-5V4"/>
-                            <constraint firstItem="NLn-Tg-zLq" firstAttribute="leading" secondItem="hWt-CA-ID9" secondAttribute="leadingMargin" id="RPU-uP-gOV"/>
-                            <constraint firstAttribute="trailing" secondItem="KVc-8I-TQ7" secondAttribute="trailing" id="goP-4h-IUE"/>
-                            <constraint firstItem="Dif-H3-94i" firstAttribute="top" secondItem="KVc-8I-TQ7" secondAttribute="bottom" id="j17-k9-2MU"/>
-                            <constraint firstItem="rKY-Bj-Rfz" firstAttribute="top" secondItem="NLn-Tg-zLq" secondAttribute="bottom" constant="8" id="jLj-9g-snT"/>
-                            <constraint firstItem="Dif-H3-94i" firstAttribute="top" secondItem="rKY-Bj-Rfz" secondAttribute="bottom" constant="20" id="l2T-U0-zjo"/>
-                            <constraint firstItem="KVc-8I-TQ7" firstAttribute="top" secondItem="zAf-Ds-wus" secondAttribute="bottom" id="rRX-MR-dJD"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="coordinatesLabel" destination="rKY-Bj-Rfz" id="bb5-AZ-Ubi"/>
-                        <outlet property="mapView" destination="KVc-8I-TQ7" id="aQi-7t-zXh"/>
-                        <outlet property="nameLabel" destination="NLn-Tg-zLq" id="S2R-mN-Dbu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jjh-OR-KCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1997.5999999999999" y="145.27736131934034"/>
         </scene>
     </scenes>
 </document>

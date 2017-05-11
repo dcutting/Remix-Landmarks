@@ -29,3 +29,6 @@ node_modules
 # FitNesse
 FitNesseRoot/RecentChanges/*
 FitNesseRoot/**/testResults/
+
+# CocoaPods
+Pods/
