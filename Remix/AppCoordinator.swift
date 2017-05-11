@@ -9,7 +9,8 @@ class AppCoordinator {
     var landmarkListViewController: LandmarkListViewController?
     var landmarkDetailViewController: LandmarkDetailViewController?
 
-    var viewData: LandmarkListViewData?
+    var listViewData: LandmarkListViewData?
+    var detailViewData: LandmarkDetailViewData?
 
     init(window: UIWindow, landmarkService: LandmarkService) {
         self.window = window
@@ -45,7 +46,7 @@ class AppCoordinator {
                 viewData = LandmarkListViewData(errorMessage: error.localizedDescription, rows: [])
             }
             landmarkListViewController?.viewData = viewData
-            self.viewData = viewData
+            self.listViewData = viewData
         }
     }
 
@@ -56,12 +57,14 @@ class AppCoordinator {
 
 extension AppCoordinator: LandmarkListViewDelegate {
     func didSelect(row: Int) {
-        guard let landmarkID = viewData?.rows[row].id else { return }
+        guard let landmarkID = listViewData?.rows[row].id else { return }
         let viewController = makeLandmarkDetailViewController()
+        viewController.delegate = self
         landmarkService.fetchLandmark(with: landmarkID) { result in
             if case let .success(landmarks) = result, let landmark = landmarks.first {
                 let viewData = LandmarkDetailPresenter().makeLandmarkDetailViewData(for: landmark)
                 viewController.viewData = viewData
+                self.detailViewData = viewData
             }
         }
         self.landmarkDetailViewController = viewController
@@ -70,5 +73,16 @@ extension AppCoordinator: LandmarkListViewDelegate {
 
     func makeLandmarkDetailViewController() -> LandmarkDetailViewController {
         return LandmarkDetailViewController()
+    }
+}
+
+extension AppCoordinator: LandmarkDetailViewControllerDelegate {
+    func didTapInfoButton() {
+        let alert = UIAlertController(title: detailViewData?.funFact, message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Really?!", style: .default) { action in
+            alert.dismiss(animated: true)
+        }
+        alert.addAction(okAction)
+        landmarkDetailViewController?.present(alert, animated: true)
     }
 }

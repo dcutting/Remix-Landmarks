@@ -2,6 +2,10 @@ import UIKit
 import Layout
 import MapKit
 
+protocol LandmarkDetailViewControllerDelegate: class {
+    func didTapInfoButton()
+}
+
 struct LandmarkDetailViewData {
 
     var title: String = ""
@@ -12,6 +16,8 @@ struct LandmarkDetailViewData {
 
 class LandmarkDetailViewController: LayoutViewController {
 
+    weak var delegate: LandmarkDetailViewControllerDelegate?
+    
     weak var mapView: MKMapView!
     weak var nameLabel: UILabel!
     weak var coordinatesLabel: UILabel!
@@ -31,11 +37,6 @@ class LandmarkDetailViewController: LayoutViewController {
     }
 
     @IBAction func didTapInfoButton(_ sender: Any) {
-        let alert = UIAlertController(title: viewData.funFact, message: nil, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Really?!", style: .default) { action in
-            alert.dismiss(animated: true)
-        }
-        alert.addAction(okAction)
-        present(alert, animated: true)
+        delegate?.didTapInfoButton()
     }
 }
