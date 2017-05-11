@@ -7,10 +7,10 @@ class AppCoordinator {
 
     let navigationController = UINavigationController()
     var landmarkListViewController: LandmarkListViewController?
-    var landmarkDetailViewController: LandmarkDetailViewController?
+    
+    var detailCoordinator: DetailCoordinator?
 
     var listViewData: LandmarkListViewData?
-    var detailViewData: LandmarkDetailViewData?
 
     init(window: UIWindow, landmarkService: LandmarkService) {
         self.window = window
@@ -58,31 +58,7 @@ class AppCoordinator {
 extension AppCoordinator: LandmarkListViewDelegate {
     func didSelect(row: Int) {
         guard let landmarkID = listViewData?.rows[row].id else { return }
-        let viewController = makeLandmarkDetailViewController()
-        viewController.delegate = self
-        landmarkService.fetchLandmark(with: landmarkID) { result in
-            if case let .success(landmarks) = result, let landmark = landmarks.first {
-                let viewData = LandmarkDetailPresenter().makeLandmarkDetailViewData(for: landmark)
-                viewController.viewData = viewData
-                self.detailViewData = viewData
-            }
-        }
-        self.landmarkDetailViewController = viewController
-        self.navigationController.pushViewController(viewController, animated: true)
-    }
-
-    func makeLandmarkDetailViewController() -> LandmarkDetailViewController {
-        return LandmarkDetailViewController()
-    }
-}
-
-extension AppCoordinator: LandmarkDetailViewControllerDelegate {
-    func didTapInfoButton() {
-        let alert = UIAlertController(title: detailViewData?.funFact, message: nil, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Really?!", style: .default) { action in
-            alert.dismiss(animated: true)
-        }
-        alert.addAction(okAction)
-        landmarkDetailViewController?.present(alert, animated: true)
+        detailCoordinator = DetailCoordinator(navigationController: navigationController, landmarkService: landmarkService)
+        detailCoordinator?.start(landmarkID: landmarkID)
     }
 }

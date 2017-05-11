@@ -22,6 +22,7 @@
 		C8748D401EB8E2E70003E683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8748D3E1EB8E2E70003E683 /* LaunchScreen.storyboard */; };
 		C8748D4B1EB8E2E70003E683 /* RemixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8748D4A1EB8E2E70003E683 /* RemixTests.swift */; };
 		C89589E81EC373E100B541A2 /* LandmarkDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89589E71EC373E100B541A2 /* LandmarkDetailPresenter.swift */; };
+		C8F386351EC460CA009C5E23 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F386341EC460CA009C5E23 /* DetailCoordinator.swift */; };
 		EB863BBED258DF9FB159293E /* Pods_RemixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA343D9E5E00A6B95BB6B44E /* Pods_RemixTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		C8748D4C1EB8E2E70003E683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8901CA11EBAADE600CF7375 /* LandmarkList.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LandmarkList.framework; path = "../../../Library/Developer/Xcode/DerivedData/Remix-hcrrzexnvjrhnndbaermmydkeofk/Build/Products/Debug-iphonesimulator/LandmarkList/LandmarkList.framework"; sourceTree = "<group>"; };
 		C89589E71EC373E100B541A2 /* LandmarkDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkDetailPresenter.swift; sourceTree = "<group>"; };
+		C8F386341EC460CA009C5E23 /* DetailCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 		CA343D9E5E00A6B95BB6B44E /* Pods_RemixTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemixTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC850923C672FD84F44A013 /* Pods-RemixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemixTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemixTests/Pods-RemixTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +153,7 @@
 				C8131EE11EC22376009E6435 /* LandmarkService.swift */,
 				016BC2871EC37839009759A4 /* MapKit+Layout.swift */,
 				C8131EE21EC22376009E6435 /* MockLandmarkService.swift */,
+				C8F386341EC460CA009C5E23 /* DetailCoordinator.swift */,
 				C8131EF81EC233D9009E6435 /* Resources */,
 			);
 			path = Remix;
@@ -378,6 +381,7 @@
 				C8131EE91EC22376009E6435 /* LandmarkDetailViewController.swift in Sources */,
 				C8131EE31EC22376009E6435 /* AppDelegate.swift in Sources */,
 				C8131EF41EC22376009E6435 /* LandmarkService.swift in Sources */,
+				C8F386351EC460CA009C5E23 /* DetailCoordinator.swift in Sources */,
 				C8131EF51EC22376009E6435 /* MockLandmarkService.swift in Sources */,
 				C8131EF01EC22376009E6435 /* LandmarkListViewController.swift in Sources */,
 				C89589E81EC373E100B541A2 /* LandmarkDetailPresenter.swift in Sources */,
