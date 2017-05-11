@@ -70,8 +70,7 @@ extension AppCoordinator: LandmarkListViewDelegate {
     }
     
     func makeLandmarkDetailViewController() -> LandmarkDetailViewController {
-        guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LandmarkDetailViewController") as? LandmarkDetailViewController else { preconditionFailure() }
-        return viewController
+        return LandmarkDetailViewController()
     }
     
     func makeLandmarkDetailViewData(for landmark: Landmark) -> LandmarkDetailViewData {
